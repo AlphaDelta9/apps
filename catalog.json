@@ -9083,10 +9083,17 @@
             "healthy_error": null,
             "home": "https://github.com/plexguide/Huntarr.io",
             "location": "/__w/apps/apps/trains/community/huntarr",
+<<<<<<< HEAD
+            "latest_version": "1.0.19",
+            "latest_app_version": "9.1.11",
+            "latest_human_version": "9.1.11_1.0.19",
+            "last_update": "2026-02-04 13:25:03",
+=======
             "latest_version": "1.0.20",
             "latest_app_version": "9.1.12",
             "latest_human_version": "9.1.12_1.0.20",
             "last_update": "2026-02-04 16:40:15",
+>>>>>>> d365b18cb55ef26c11cb110db9948b4ad22f73a9
             "name": "huntarr",
             "recommended": false,
             "title": "Huntarr",
