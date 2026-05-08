@@ -1,18 +1,18 @@
 {
-    "1.2.18": {
+    "1.3.9": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/ddns-updater/1.2.18",
-        "last_update": "2026-01-27 13:13:23",
+        "location": "/__w/apps/apps/trains/community/ddns-updater/1.3.9",
+        "last_update": "2026-05-05 12:38:31",
         "required_features": [],
-        "human_version": "v2.9.0_1.2.18",
-        "version": "1.2.18",
+        "human_version": "v2.10.0_1.3.9",
+        "version": "1.3.9",
         "app_metadata": {
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "v2.9.0",
+            "app_version": "v2.10.0",
             "capabilities": [],
             "categories": [
                 "networking"
@@ -27,8 +27,8 @@
                 "ddns-updater",
                 "ddns"
             ],
-            "lib_version": "2.1.77",
-            "lib_version_hash": "1837f8e69ae1adc313330c3b1c2615e9b4d03c5459d657a5898bae78090f8195",
+            "lib_version": "2.3.4",
+            "lib_version_hash": "2e3a8847308fb2eb0da046018f287c73822c094b5950a10377c3235794ff1242",
             "maintainers": [
                 {
                     "email": "dev@truenas.com",
@@ -55,7 +55,7 @@
             ],
             "title": "DDNS Updater",
             "train": "community",
-            "version": "1.2.18"
+            "version": "1.3.9"
         },
         "schema": {
             "groups": [
@@ -674,7 +674,11 @@
                                                                 },
                                                                 {
                                                                     "value": "hetzner",
-                                                                    "description": "Hetzner"
+                                                                    "description": "Hetzner (Deprecated - Use Hetzner Cloud)"
+                                                                },
+                                                                {
+                                                                    "value": "hetznercloud",
+                                                                    "description": "Hetzner Cloud"
                                                                 },
                                                                 {
                                                                     "value": "infomaniak",
@@ -687,6 +691,10 @@
                                                                 {
                                                                     "value": "ionos",
                                                                     "description": "Ionos"
+                                                                },
+                                                                {
+                                                                    "value": "ipv64",
+                                                                    "description": "IPv64"
                                                                 },
                                                                 {
                                                                     "value": "linode",
@@ -749,12 +757,20 @@
                                                                     "description": "Amazon Route 53"
                                                                 },
                                                                 {
+                                                                    "value": "scaleway",
+                                                                    "description": "Scaleway"
+                                                                },
+                                                                {
                                                                     "value": "selfhost.de",
                                                                     "description": "Selfhost.de"
                                                                 },
                                                                 {
                                                                     "value": "servercow",
                                                                     "description": "Servercow"
+                                                                },
+                                                                {
+                                                                    "value": "spaceship",
+                                                                    "description": "Spaceship"
                                                                 },
                                                                 {
                                                                     "value": "spdyn",
@@ -767,6 +783,10 @@
                                                                 {
                                                                     "value": "variomedia",
                                                                     "description": "Variomedia"
+                                                                },
+                                                                {
+                                                                    "value": "vercel",
+                                                                    "description": "Vercel"
                                                                 },
                                                                 {
                                                                     "value": "vultr",
@@ -793,22 +813,6 @@
                                                                 ]
                                                             ],
                                                             "required": true
-                                                        }
-                                                    },
-                                                    {
-                                                        "variable": "host",
-                                                        "label": "Host (Deprecated)",
-                                                        "description": "DEPRECATED. Use Domain field instead.</br>\nIt will be removed in the near future.\n",
-                                                        "schema": {
-                                                            "type": "string",
-                                                            "show_if": [
-                                                                [
-                                                                    "provider",
-                                                                    "!=",
-                                                                    ""
-                                                                ]
-                                                            ],
-                                                            "default": ""
                                                         }
                                                     },
                                                     {
@@ -839,6 +843,22 @@
                                                                     "description": "IPv4 and IPv6"
                                                                 }
                                                             ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "ipv6_suffix",
+                                                        "label": "IPv6 Suffix",
+                                                        "description": "IPv6 interface identifier suffix to use. </br>\nLeave empty to use the raw IPv6 address. </br>\nFor example: 0:0:0:0:0:0:0:0/64\n",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "show_if": [
+                                                                [
+                                                                    "provider",
+                                                                    "!=",
+                                                                    ""
+                                                                ]
+                                                            ],
+                                                            "default": ""
                                                         }
                                                     },
                                                     {
@@ -1643,6 +1663,37 @@
                                                         }
                                                     },
                                                     {
+                                                        "variable": "hetznercloud_token",
+                                                        "label": "Token",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "required": true,
+                                                            "private": true,
+                                                            "show_if": [
+                                                                [
+                                                                    "provider",
+                                                                    "=",
+                                                                    "hetznercloud"
+                                                                ]
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "hetznercloud_ttl",
+                                                        "label": "TTL",
+                                                        "schema": {
+                                                            "type": "int",
+                                                            "default": 3600,
+                                                            "show_if": [
+                                                                [
+                                                                    "provider",
+                                                                    "=",
+                                                                    "hetznercloud"
+                                                                ]
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
                                                         "variable": "infomaniak_username",
                                                         "label": "Username",
                                                         "schema": {
@@ -1716,6 +1767,22 @@
                                                                     "provider",
                                                                     "=",
                                                                     "ionos"
+                                                                ]
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "ipv64_key",
+                                                        "label": "Key",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "required": true,
+                                                            "private": true,
+                                                            "show_if": [
+                                                                [
+                                                                    "provider",
+                                                                    "=",
+                                                                    "ipv64"
                                                                 ]
                                                             ]
                                                         }
@@ -1958,7 +2025,7 @@
                                                     },
                                                     {
                                                         "variable": "njalla_key",
-                                                        "label": "Key",
+                                                        "label": "Key (Per Record)",
                                                         "schema": {
                                                             "type": "string",
                                                             "required": true,
@@ -2289,6 +2356,37 @@
                                                         }
                                                     },
                                                     {
+                                                        "variable": "scaleway_secret_key",
+                                                        "label": "Secret Key",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "required": true,
+                                                            "private": true,
+                                                            "show_if": [
+                                                                [
+                                                                    "provider",
+                                                                    "=",
+                                                                    "scaleway"
+                                                                ]
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "scaleway_ttl",
+                                                        "label": "TTL",
+                                                        "schema": {
+                                                            "type": "int",
+                                                            "default": 3600,
+                                                            "show_if": [
+                                                                [
+                                                                    "provider",
+                                                                    "=",
+                                                                    "scaleway"
+                                                                ]
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
                                                         "variable": "selfhostde_username",
                                                         "label": "Username",
                                                         "schema": {
@@ -2362,6 +2460,53 @@
                                                                     "provider",
                                                                     "=",
                                                                     "servercow"
+                                                                ]
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "spaceship_api_key",
+                                                        "label": "API Key",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "required": true,
+                                                            "private": true,
+                                                            "show_if": [
+                                                                [
+                                                                    "provider",
+                                                                    "=",
+                                                                    "spaceship"
+                                                                ]
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "spaceship_api_secret",
+                                                        "label": "API Secret",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "required": true,
+                                                            "private": true,
+                                                            "show_if": [
+                                                                [
+                                                                    "provider",
+                                                                    "=",
+                                                                    "spaceship"
+                                                                ]
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "spaceship_ttl",
+                                                        "label": "TTL",
+                                                        "schema": {
+                                                            "type": "int",
+                                                            "default": 3600,
+                                                            "show_if": [
+                                                                [
+                                                                    "provider",
+                                                                    "=",
+                                                                    "spaceship"
                                                                 ]
                                                             ]
                                                         }
@@ -2453,6 +2598,52 @@
                                                                     "provider",
                                                                     "=",
                                                                     "variomedia"
+                                                                ]
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "vercel_token",
+                                                        "label": "Token",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "required": true,
+                                                            "private": true,
+                                                            "show_if": [
+                                                                [
+                                                                    "provider",
+                                                                    "=",
+                                                                    "vercel"
+                                                                ]
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "vercel_team_id",
+                                                        "label": "Team ID",
+                                                        "description": "Required if the domain belongs to a team rather than your personal account.",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "show_if": [
+                                                                [
+                                                                    "provider",
+                                                                    "=",
+                                                                    "vercel"
+                                                                ]
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "vercel_ttl",
+                                                        "label": "TTL",
+                                                        "schema": {
+                                                            "type": "int",
+                                                            "default": 3600,
+                                                            "show_if": [
+                                                                [
+                                                                    "provider",
+                                                                    "=",
+                                                                    "vercel"
                                                                 ]
                                                             ]
                                                         }
@@ -2663,6 +2854,153 @@
                                                             "required": true,
                                                             "$ref": [
                                                                 "definitions/node_bind_ip"
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "variable": "networks",
+                                "label": "Networks",
+                                "description": "The docker networks to join",
+                                "schema": {
+                                    "type": "list",
+                                    "show_if": [
+                                        [
+                                            "host_network",
+                                            "=",
+                                            false
+                                        ]
+                                    ],
+                                    "default": [],
+                                    "items": [
+                                        {
+                                            "variable": "network",
+                                            "label": "Network",
+                                            "schema": {
+                                                "type": "dict",
+                                                "attrs": [
+                                                    {
+                                                        "variable": "name",
+                                                        "label": "Name",
+                                                        "description": "The name of the network to join.</br>\nThe network must already exist.\n",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "default": "",
+                                                            "required": true
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "containers",
+                                                        "label": "Containers",
+                                                        "description": "The containers to add to this network.",
+                                                        "schema": {
+                                                            "type": "list",
+                                                            "items": [
+                                                                {
+                                                                    "variable": "container",
+                                                                    "label": "Container",
+                                                                    "schema": {
+                                                                        "type": "dict",
+                                                                        "attrs": [
+                                                                            {
+                                                                                "variable": "name",
+                                                                                "label": "Container Name",
+                                                                                "schema": {
+                                                                                    "type": "string",
+                                                                                    "required": true,
+                                                                                    "enum": [
+                                                                                        {
+                                                                                            "value": "ddns",
+                                                                                            "description": "ddns"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "variable": "config",
+                                                                                "label": "Container Network Configuration",
+                                                                                "schema": {
+                                                                                    "type": "dict",
+                                                                                    "attrs": [
+                                                                                        {
+                                                                                            "variable": "aliases",
+                                                                                            "label": "Aliases (Optional)",
+                                                                                            "description": "The network aliases to use for this container on this network.",
+                                                                                            "schema": {
+                                                                                                "type": "list",
+                                                                                                "default": [],
+                                                                                                "items": [
+                                                                                                    {
+                                                                                                        "variable": "alias",
+                                                                                                        "label": "Alias",
+                                                                                                        "schema": {
+                                                                                                            "type": "string"
+                                                                                                        }
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "interface_name",
+                                                                                            "label": "Interface Name (Optional)",
+                                                                                            "description": "The network interface name to use for this network",
+                                                                                            "schema": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "mac_address",
+                                                                                            "label": "MAC Address (Optional)",
+                                                                                            "description": "The MAC address to use for this network interface.",
+                                                                                            "schema": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "ipv4_address",
+                                                                                            "label": "IPv4 Address (Optional)",
+                                                                                            "description": "The IPv4 address to use for this network interface.",
+                                                                                            "schema": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "ipv6_address",
+                                                                                            "label": "IPv6 Address (Optional)",
+                                                                                            "description": "The IPv6 address to use for this network interface.",
+                                                                                            "schema": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "gw_priority",
+                                                                                            "label": "Gateway Priority (Optional)",
+                                                                                            "description": "Indicates the priority of the gateway for this network interface.",
+                                                                                            "schema": {
+                                                                                                "type": "int",
+                                                                                                "null": true
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "priority",
+                                                                                            "label": "Priority (Optional)",
+                                                                                            "description": "Indicates in which order Compose connects the service's containers to its networks.",
+                                                                                            "schema": {
+                                                                                                "type": "int",
+                                                                                                "null": true
+                                                                                            }
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
                                                             ]
                                                         }
                                                     }
@@ -3223,7 +3561,7 @@
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "v2.9.0",
+            "app_version": "v2.10.0",
             "capabilities": [],
             "categories": [
                 "networking"
@@ -3238,8 +3576,8 @@
                 "ddns-updater",
                 "ddns"
             ],
-            "lib_version": "2.1.77",
-            "lib_version_hash": "1837f8e69ae1adc313330c3b1c2615e9b4d03c5459d657a5898bae78090f8195",
+            "lib_version": "2.3.4",
+            "lib_version_hash": "2e3a8847308fb2eb0da046018f287c73822c094b5950a10377c3235794ff1242",
             "maintainers": [
                 {
                     "email": "dev@truenas.com",
@@ -3266,7 +3604,7 @@
             ],
             "title": "DDNS Updater",
             "train": "community",
-            "version": "1.2.18"
+            "version": "1.3.9"
         }
     }
 }

@@ -1,4 +1,4 @@
-app_version: 1.84.0
+app_version: 1.88.0
 capabilities: []
 categories:
 - networking
@@ -12,8 +12,8 @@ icon: https://media.sys.truenas.net/apps/twingate-connector/icons/icon.svg
 keywords:
 - vpn
 - twingate
-lib_version: 2.1.78
-lib_version_hash: 704d8b93e03eb32f66350c926e93f9f1f7e43f21c1bfbd4d28d4035c6fcd77e4
+lib_version: 2.3.4
+lib_version_hash: 2e3a8847308fb2eb0da046018f287c73822c094b5950a10377c3235794ff1242
 maintainers:
 - email: dev@truenas.com
   name: truenas
@@ -30,4 +30,4 @@ sources:
 - https://www.twingate.com/
 title: Twingate Connector
 train: community
-version: 1.0.3
+version: 1.1.9

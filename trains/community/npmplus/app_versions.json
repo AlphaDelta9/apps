@@ -1,15 +1,15 @@
 {
-    "1.0.0": {
+    "1.1.9": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/npmplus/1.0.0",
-        "last_update": "2026-02-09 19:27:10",
+        "location": "/__w/apps/apps/trains/community/npmplus/1.1.9",
+        "last_update": "2026-04-27 11:53:24",
         "required_features": [],
-        "human_version": "2026-02-06-r1_1.0.0",
-        "version": "1.0.0",
+        "human_version": "2026-04-21-r1_1.1.9",
+        "version": "1.1.9",
         "app_metadata": {
-            "app_version": "2026-02-06-r1",
+            "app_version": "2026-04-21-r1",
             "capabilities": [
                 {
                     "description": "Nginx Proxy Manager Plus is able to change file ownership arbitrarily",
@@ -47,8 +47,8 @@
                 "proxy",
                 "npmplus"
             ],
-            "lib_version": "2.1.78",
-            "lib_version_hash": "704d8b93e03eb32f66350c926e93f9f1f7e43f21c1bfbd4d28d4035c6fcd77e4",
+            "lib_version": "2.3.4",
+            "lib_version_hash": "2e3a8847308fb2eb0da046018f287c73822c094b5950a10377c3235794ff1242",
             "maintainers": [
                 {
                     "email": "dev@truenas.com",
@@ -72,7 +72,7 @@
             ],
             "title": "Nginx Proxy Manager Plus",
             "train": "community",
-            "version": "1.0.0"
+            "version": "1.1.9"
         },
         "schema": {
             "groups": [
@@ -514,6 +514,153 @@
                                                                         "required": true,
                                                                         "$ref": [
                                                                             "definitions/node_bind_ip"
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "variable": "networks",
+                                "label": "Networks",
+                                "description": "The docker networks to join",
+                                "schema": {
+                                    "type": "list",
+                                    "show_if": [
+                                        [
+                                            "host_network",
+                                            "=",
+                                            false
+                                        ]
+                                    ],
+                                    "default": [],
+                                    "items": [
+                                        {
+                                            "variable": "network",
+                                            "label": "Network",
+                                            "schema": {
+                                                "type": "dict",
+                                                "attrs": [
+                                                    {
+                                                        "variable": "name",
+                                                        "label": "Name",
+                                                        "description": "The name of the network to join.</br>\nThe network must already exist.\n",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "default": "",
+                                                            "required": true
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "containers",
+                                                        "label": "Containers",
+                                                        "description": "The containers to add to this network.",
+                                                        "schema": {
+                                                            "type": "list",
+                                                            "items": [
+                                                                {
+                                                                    "variable": "container",
+                                                                    "label": "Container",
+                                                                    "schema": {
+                                                                        "type": "dict",
+                                                                        "attrs": [
+                                                                            {
+                                                                                "variable": "name",
+                                                                                "label": "Container Name",
+                                                                                "schema": {
+                                                                                    "type": "string",
+                                                                                    "required": true,
+                                                                                    "enum": [
+                                                                                        {
+                                                                                            "value": "npmplus",
+                                                                                            "description": "npmplus"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "variable": "config",
+                                                                                "label": "Container Network Configuration",
+                                                                                "schema": {
+                                                                                    "type": "dict",
+                                                                                    "attrs": [
+                                                                                        {
+                                                                                            "variable": "aliases",
+                                                                                            "label": "Aliases (Optional)",
+                                                                                            "description": "The network aliases to use for this container on this network.",
+                                                                                            "schema": {
+                                                                                                "type": "list",
+                                                                                                "default": [],
+                                                                                                "items": [
+                                                                                                    {
+                                                                                                        "variable": "alias",
+                                                                                                        "label": "Alias",
+                                                                                                        "schema": {
+                                                                                                            "type": "string"
+                                                                                                        }
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "interface_name",
+                                                                                            "label": "Interface Name (Optional)",
+                                                                                            "description": "The network interface name to use for this network",
+                                                                                            "schema": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "mac_address",
+                                                                                            "label": "MAC Address (Optional)",
+                                                                                            "description": "The MAC address to use for this network interface.",
+                                                                                            "schema": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "ipv4_address",
+                                                                                            "label": "IPv4 Address (Optional)",
+                                                                                            "description": "The IPv4 address to use for this network interface.",
+                                                                                            "schema": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "ipv6_address",
+                                                                                            "label": "IPv6 Address (Optional)",
+                                                                                            "description": "The IPv6 address to use for this network interface.",
+                                                                                            "schema": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "gw_priority",
+                                                                                            "label": "Gateway Priority (Optional)",
+                                                                                            "description": "Indicates the priority of the gateway for this network interface.",
+                                                                                            "schema": {
+                                                                                                "type": "int",
+                                                                                                "null": true
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "priority",
+                                                                                            "label": "Priority (Optional)",
+                                                                                            "description": "Indicates in which order Compose connects the service's containers to its networks.",
+                                                                                            "schema": {
+                                                                                                "type": "int",
+                                                                                                "null": true
+                                                                                            }
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            }
                                                                         ]
                                                                     }
                                                                 }
@@ -1070,7 +1217,7 @@
         "readme": "<h1>NPMplus</h1> <p><a href=\"https://github.com/ZoeyVid/NPMplus\">NPMplus</a> is Nginx Proxy Manager but better!</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "2026-02-06-r1",
+            "app_version": "2026-04-21-r1",
             "capabilities": [
                 {
                     "description": "Nginx Proxy Manager Plus is able to change file ownership arbitrarily",
@@ -1108,8 +1255,8 @@
                 "proxy",
                 "npmplus"
             ],
-            "lib_version": "2.1.78",
-            "lib_version_hash": "704d8b93e03eb32f66350c926e93f9f1f7e43f21c1bfbd4d28d4035c6fcd77e4",
+            "lib_version": "2.3.4",
+            "lib_version_hash": "2e3a8847308fb2eb0da046018f287c73822c094b5950a10377c3235794ff1242",
             "maintainers": [
                 {
                     "email": "dev@truenas.com",
@@ -1133,7 +1280,7 @@
             ],
             "title": "Nginx Proxy Manager Plus",
             "train": "community",
-            "version": "1.0.0"
+            "version": "1.1.9"
         }
     }
 }

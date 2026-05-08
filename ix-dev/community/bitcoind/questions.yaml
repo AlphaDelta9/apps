@@ -55,7 +55,8 @@ questions:
             min: 0
         - variable: clearnet_outgoing_enabled
           label: Clearnet Outgoing Connections
-          description: Connect to peers available on the clearnet (publicly accessible internet).
+          description: Connect to peers available on the clearnet (publicly accessible
+            internet).
           schema:
             type: boolean
             default: true
@@ -91,7 +92,8 @@ questions:
             default: false
         - variable: tor_incoming_address
           label: Incoming Onion Address
-          description: Enter the local IP of this machine if you are running the Arti TrueNAS App.
+          description: Enter the local IP of this machine if you are running the Arti
+            TrueNAS App.
           schema:
             type: string
             required: true
@@ -152,6 +154,14 @@ questions:
             type: int
             min: 1
             max: 65535
+        - variable: private_broadcast_enabled
+          label: Private Broadcast
+          description: |
+            When enabled, your locally submitted transactions will only be broadcast via Tor and I2P.
+          schema:
+            type: boolean
+            default: true
+            show_if: [["tor_outgoing_enabled", "=", true], ["i2p_outgoing_enabled", "=", true]]
         - variable: public_rest_api_enabled
           label: Public REST API
           description: |
@@ -328,7 +338,8 @@ questions:
             default: true
         - variable: max_op_return_size
           label: Max Allowed Size of Arbitrary Data in Transactions (bytes)
-          description: Set the maximum size of the data in OP_RETURN outputs that your node will relay.
+          description: Set the maximum size of the data in OP_RETURN outputs that your
+            node will relay.
           schema:
             type: int
             required: true
@@ -379,20 +390,6 @@ questions:
           schema:
             type: boolean
             default: true
-        - variable: max_orphan_txs
-          label: Max Orphan Transactions
-          description: |
-            Set the maximum number of orphan transactions (transactions missing one or more of their
-            inputs) that your node will keep in memory. By fine-tuning it, you can optimize your
-            node's memory usage and manage its performance based on your device's capabilities. A
-            larger limit allows your node to store more orphan transactions, potentially increasing
-            the chances of finding missing inputs. A smaller limit conserves memory but will result
-            in your node evicting some orphan transactions from memory when the limit is reached.
-          schema:
-            type: int
-            required: true
-            default: 100
-            min: 0
         - variable: additional_flags
           label: Additional flags
           description: |
@@ -415,7 +412,8 @@ questions:
       attrs:
         - variable: rpc_port
           label: RPC Port
-          description: This is the RPC port which is useful for other apps like Electrs to communicate with.
+          description: This is the RPC port which is useful for other apps like Electrs to
+            communicate with.
           schema:
             type: dict
             attrs:
@@ -561,6 +559,95 @@ questions:
                         required: true
                         $ref:
                           - definitions/node_bind_ip
+        - variable: networks
+          label: Networks
+          description: The docker networks to join
+          schema:
+            type: list
+            default: []
+            items:
+              - variable: network
+                label: Network
+                schema:
+                  type: dict
+                  attrs:
+                    - variable: name
+                      label: Name
+                      description: |
+                        The name of the network to join.</br>
+                        The network must already exist.
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+                    - variable: containers
+                      label: Containers
+                      description: The containers to add to this network.
+                      schema:
+                        type: list
+                        items:
+                          - variable: container
+                            label: Container
+                            schema:
+                              type: dict
+                              attrs:
+                                - variable: name
+                                  label: Container Name
+                                  schema:
+                                    type: string
+                                    required: true
+                                    enum:
+                                      - value: bitcoind
+                                        description: bitcoind
+                                - variable: config
+                                  label: Container Network Configuration
+                                  schema:
+                                    type: dict
+                                    attrs:
+                                      - variable: aliases
+                                        label: Aliases (Optional)
+                                        description: The network aliases to use for this container on this network.
+                                        schema:
+                                          type: list
+                                          default: []
+                                          items:
+                                            - variable: alias
+                                              label: Alias
+                                              schema:
+                                                type: string
+                                      - variable: interface_name
+                                        label: Interface Name (Optional)
+                                        description: The network interface name to use for this network
+                                        schema:
+                                          type: string
+                                      - variable: mac_address
+                                        label: MAC Address (Optional)
+                                        description: The MAC address to use for this network interface.
+                                        schema:
+                                          type: string
+                                      - variable: ipv4_address
+                                        label: IPv4 Address (Optional)
+                                        description: The IPv4 address to use for this network interface.
+                                        schema:
+                                          type: string
+                                      - variable: ipv6_address
+                                        label: IPv6 Address (Optional)
+                                        description: The IPv6 address to use for this network interface.
+                                        schema:
+                                          type: string
+                                      - variable: gw_priority
+                                        label: Gateway Priority (Optional)
+                                        description: Indicates the priority of the gateway for this network interface.
+                                        schema:
+                                          type: int
+                                          "null": true
+                                      - variable: priority
+                                        label: Priority (Optional)
+                                        description: Indicates in which order Compose connects the service's containers
+                                          to its networks.
+                                        schema:
+                                          type: int
+                                          "null": true
 
   - variable: storage
     label: ""

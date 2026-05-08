@@ -1,23 +1,34 @@
 {
-    "1.0.104": {
+    "1.3.6": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/test/nextcloud/1.0.104",
-        "last_update": "2026-02-06 21:18:11",
+        "location": "/__w/apps/apps/trains/test/nextcloud/1.3.6",
+        "last_update": "2026-05-07 13:38:17",
         "required_features": [],
-        "human_version": "32.0.5-fpm-5fdeef26_1.0.104",
-        "version": "1.0.104",
+        "human_version": "33.0.2-fpm-75d7b070_1.3.6",
+        "version": "1.3.6",
         "app_metadata": {
-            "app_version": "32.0.5-fpm-5fdeef26",
-            "capabilities": [],
+            "app_version": "33.0.2-fpm-75d7b070",
+            "capabilities": [
+                {
+                    "description": "Harp is able to bypass read/execute permission checks",
+                    "name": "DAC_READ_SEARCH"
+                }
+            ],
             "categories": [
                 "productivity"
             ],
+            "changelog_url": "https://nextcloud.com/changelog/",
             "date_added": "2025-03-05",
             "description": "A file sharing server that puts the control and security of your own data back into your hands.",
             "home": "https://nextcloud.com/",
-            "host_mounts": [],
+            "host_mounts": [
+                {
+                    "description": "Required for HaRP (AppAPI) to manage Docker containers when enabled.",
+                    "host_path": "/var/run/docker.sock"
+                }
+            ],
             "icon": "https://media.sys.truenas.net/apps/nextcloud/icons/icon.svg",
             "keywords": [
                 "nextcloud",
@@ -27,8 +38,8 @@
                 "web",
                 "php"
             ],
-            "lib_version": "2.1.77",
-            "lib_version_hash": "1837f8e69ae1adc313330c3b1c2615e9b4d03c5459d657a5898bae78090f8195",
+            "lib_version": "2.3.4",
+            "lib_version_hash": "2e3a8847308fb2eb0da046018f287c73822c094b5950a10377c3235794ff1242",
             "maintainers": [
                 {
                     "email": "dev@truenas.com",
@@ -44,6 +55,13 @@
                     "group_name": "Host group is [apps]",
                     "uid": 568,
                     "user_name": "Host user is [apps]"
+                },
+                {
+                    "description": "Container [harp] runs as root user and group.",
+                    "gid": 0,
+                    "group_name": "Host group is [root]",
+                    "uid": 0,
+                    "user_name": "Host user is [root]"
                 },
                 {
                     "description": "Container [imaginary] can run as any non-root user and group.",
@@ -102,7 +120,7 @@
             ],
             "title": "Nextcloud",
             "train": "test",
-            "version": "1.0.104"
+            "version": "1.3.6"
         },
         "schema": {
             "groups": [
@@ -741,6 +759,73 @@
                                 }
                             },
                             {
+                                "variable": "harp",
+                                "label": "HaRP (AppAPI)",
+                                "description": "HaRP (HAProxy Reverse Proxy) enables Nextcloud AppAPI for External Apps (ExApps).</br>\nEnabling or Disabling this will trigger actions on each startup to ensure\nthe configuration is either present or absent.</br>\nRequires Docker socket access (/var/run/docker.sock).</br>\nSee https://github.com/nextcloud/HaRP for more information.\n",
+                                "schema": {
+                                    "type": "dict",
+                                    "attrs": [
+                                        {
+                                            "variable": "enabled",
+                                            "label": "Enabled",
+                                            "description": "Enable HaRP for Nextcloud AppAPI",
+                                            "schema": {
+                                                "type": "boolean",
+                                                "default": false
+                                            }
+                                        },
+                                        {
+                                            "variable": "shared_key",
+                                            "label": "Shared Key",
+                                            "description": "Secret key shared between HaRP and Nextcloud AppAPI.</br>\nSet the same value in Nextcloud Admin > AppAPI > Deploy Daemons.\n",
+                                            "schema": {
+                                                "type": "string",
+                                                "private": true,
+                                                "required": true,
+                                                "show_if": [
+                                                    [
+                                                        "enabled",
+                                                        "=",
+                                                        true
+                                                    ]
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "variable": "compute_device",
+                                            "label": "Compute Device",
+                                            "description": "GPU device to expose to the daemon",
+                                            "schema": {
+                                                "type": "string",
+                                                "default": "cpu",
+                                                "required": true,
+                                                "show_if": [
+                                                    [
+                                                        "enabled",
+                                                        "=",
+                                                        true
+                                                    ]
+                                                ],
+                                                "enum": [
+                                                    {
+                                                        "value": "cpu",
+                                                        "description": "CPU"
+                                                    },
+                                                    {
+                                                        "value": "cuda",
+                                                        "description": "CUDA compatible GPU"
+                                                    },
+                                                    {
+                                                        "value": "rocm",
+                                                        "description": "ROCm compatible GPU"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
                                 "variable": "collabora",
                                 "label": "Collabora",
                                 "description": "Collabora settings for Nextcloud.</br>\nEnabling or Disabling this will trigger actions on each startup to ensure\nthe configuration is either present or absent.</br>\nActions like, update configuration, add/remove nextcloud app.\n",
@@ -1237,6 +1322,174 @@
                                     "null": true,
                                     "$ref": [
                                         "definitions/certificate"
+                                    ]
+                                }
+                            },
+                            {
+                                "variable": "networks",
+                                "label": "Networks",
+                                "description": "The docker networks to join",
+                                "schema": {
+                                    "type": "list",
+                                    "default": [],
+                                    "items": [
+                                        {
+                                            "variable": "network",
+                                            "label": "Network",
+                                            "schema": {
+                                                "type": "dict",
+                                                "attrs": [
+                                                    {
+                                                        "variable": "name",
+                                                        "label": "Name",
+                                                        "description": "The name of the network to join.</br>\nThe network must already exist.\n",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "default": "",
+                                                            "required": true
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "containers",
+                                                        "label": "Containers",
+                                                        "description": "The containers to add to this network.",
+                                                        "schema": {
+                                                            "type": "list",
+                                                            "items": [
+                                                                {
+                                                                    "variable": "container",
+                                                                    "label": "Container",
+                                                                    "schema": {
+                                                                        "type": "dict",
+                                                                        "attrs": [
+                                                                            {
+                                                                                "variable": "name",
+                                                                                "label": "Container Name",
+                                                                                "schema": {
+                                                                                    "type": "string",
+                                                                                    "required": true,
+                                                                                    "enum": [
+                                                                                        {
+                                                                                            "value": "nextcloud",
+                                                                                            "description": "nextcloud"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "imaginary",
+                                                                                            "description": "imaginary"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "notify-push",
+                                                                                            "description": "notify-push"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "cron",
+                                                                                            "description": "cron"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "nginx",
+                                                                                            "description": "nginx"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "postgres",
+                                                                                            "description": "postgres"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "redis",
+                                                                                            "description": "redis"
+                                                                                        },
+                                                                                        {
+                                                                                            "value": "harp",
+                                                                                            "description": "harp"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "variable": "config",
+                                                                                "label": "Container Network Configuration",
+                                                                                "schema": {
+                                                                                    "type": "dict",
+                                                                                    "attrs": [
+                                                                                        {
+                                                                                            "variable": "aliases",
+                                                                                            "label": "Aliases (Optional)",
+                                                                                            "description": "The network aliases to use for this container on this network.",
+                                                                                            "schema": {
+                                                                                                "type": "list",
+                                                                                                "default": [],
+                                                                                                "items": [
+                                                                                                    {
+                                                                                                        "variable": "alias",
+                                                                                                        "label": "Alias",
+                                                                                                        "schema": {
+                                                                                                            "type": "string"
+                                                                                                        }
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "interface_name",
+                                                                                            "label": "Interface Name (Optional)",
+                                                                                            "description": "The network interface name to use for this network",
+                                                                                            "schema": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "mac_address",
+                                                                                            "label": "MAC Address (Optional)",
+                                                                                            "description": "The MAC address to use for this network interface.",
+                                                                                            "schema": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "ipv4_address",
+                                                                                            "label": "IPv4 Address (Optional)",
+                                                                                            "description": "The IPv4 address to use for this network interface.",
+                                                                                            "schema": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "ipv6_address",
+                                                                                            "label": "IPv6 Address (Optional)",
+                                                                                            "description": "The IPv6 address to use for this network interface.",
+                                                                                            "schema": {
+                                                                                                "type": "string"
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "gw_priority",
+                                                                                            "label": "Gateway Priority (Optional)",
+                                                                                            "description": "Indicates the priority of the gateway for this network interface.",
+                                                                                            "schema": {
+                                                                                                "type": "int",
+                                                                                                "null": true
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "variable": "priority",
+                                                                                            "label": "Priority (Optional)",
+                                                                                            "description": "Indicates in which order Compose connects the service's containers to its networks.",
+                                                                                            "schema": {
+                                                                                                "type": "int",
+                                                                                                "null": true
+                                                                                            }
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
                                     ]
                                 }
                             }
@@ -2050,6 +2303,10 @@
                                                                 {
                                                                     "value": "redis",
                                                                     "description": "redis"
+                                                                },
+                                                                {
+                                                                    "value": "harp",
+                                                                    "description": "harp"
                                                                 }
                                                             ]
                                                         }
@@ -2119,15 +2376,26 @@
         "readme": "<h1>Nextcloud</h1> <p><a href=\"https://nextcloud.com/\">Nextcloud</a> is a file sharing server that puts the control and security of your own data back into your hands.</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "32.0.5-fpm-5fdeef26",
-            "capabilities": [],
+            "app_version": "33.0.2-fpm-75d7b070",
+            "capabilities": [
+                {
+                    "description": "Harp is able to bypass read/execute permission checks",
+                    "name": "DAC_READ_SEARCH"
+                }
+            ],
             "categories": [
                 "productivity"
             ],
+            "changelog_url": "https://nextcloud.com/changelog/",
             "date_added": "2025-03-05",
             "description": "A file sharing server that puts the control and security of your own data back into your hands.",
             "home": "https://nextcloud.com/",
-            "host_mounts": [],
+            "host_mounts": [
+                {
+                    "description": "Required for HaRP (AppAPI) to manage Docker containers when enabled.",
+                    "host_path": "/var/run/docker.sock"
+                }
+            ],
             "icon": "https://media.sys.truenas.net/apps/nextcloud/icons/icon.svg",
             "keywords": [
                 "nextcloud",
@@ -2137,8 +2405,8 @@
                 "web",
                 "php"
             ],
-            "lib_version": "2.1.77",
-            "lib_version_hash": "1837f8e69ae1adc313330c3b1c2615e9b4d03c5459d657a5898bae78090f8195",
+            "lib_version": "2.3.4",
+            "lib_version_hash": "2e3a8847308fb2eb0da046018f287c73822c094b5950a10377c3235794ff1242",
             "maintainers": [
                 {
                     "email": "dev@truenas.com",
@@ -2154,6 +2422,13 @@
                     "group_name": "Host group is [apps]",
                     "uid": 568,
                     "user_name": "Host user is [apps]"
+                },
+                {
+                    "description": "Container [harp] runs as root user and group.",
+                    "gid": 0,
+                    "group_name": "Host group is [root]",
+                    "uid": 0,
+                    "user_name": "Host user is [root]"
                 },
                 {
                     "description": "Container [imaginary] can run as any non-root user and group.",
@@ -2212,7 +2487,7 @@
             ],
             "title": "Nextcloud",
             "train": "test",
-            "version": "1.0.104"
+            "version": "1.3.6"
         }
     }
 }

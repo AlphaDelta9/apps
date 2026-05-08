@@ -1,15 +1,18 @@
 {
-    "1.0.39": {
+    "1.0.42": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/enterprise/ix-remote-assist/1.0.39",
-        "last_update": "2026-02-06 16:12:53",
+        "location": "/__w/apps/apps/trains/enterprise/ix-remote-assist/1.0.42",
+        "last_update": "2026-04-16 15:39:17",
         "required_features": [],
-        "human_version": "v1.94.1_1.0.39",
-        "version": "1.0.39",
+        "human_version": "v1.96.5_1.0.42",
+        "version": "1.0.42",
         "app_metadata": {
-            "app_version": "v1.94.1",
+            "annotations": {
+                "disallow_multiple_instances": true
+            },
+            "app_version": "v1.96.5",
             "capabilities": [
                 {
                     "description": "Remote Assist is able to change file ownership arbitrarily",
@@ -79,7 +82,7 @@
             ],
             "title": "Remote Assist",
             "train": "enterprise",
-            "version": "1.0.39"
+            "version": "1.0.42"
         },
         "schema": {
             "groups": [
@@ -223,7 +226,10 @@
         "readme": "<h1>Remote Assist</h1> <p><a href=\"https://truenas.com\">Remote Assist</a> iX support remote assistance for Enterprise Systems</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "v1.94.1",
+            "annotations": {
+                "disallow_multiple_instances": true
+            },
+            "app_version": "v1.96.5",
             "capabilities": [
                 {
                     "description": "Remote Assist is able to change file ownership arbitrarily",
@@ -293,7 +299,7 @@
             ],
             "title": "Remote Assist",
             "train": "enterprise",
-            "version": "1.0.39"
+            "version": "1.0.42"
         }
     }
 }

@@ -1,4 +1,4 @@
-app_version: 1.9.0
+app_version: 1.12.4
 capabilities: []
 categories:
 - networking
@@ -8,15 +8,17 @@ description: Newt is a fully user space WireGuard tunnel client and TCP/UDP prox
   designed to securely expose private resources controlled by Pangolin. By using Newt,
   you don't need to manage complex WireGuard tunnels and NATing.
 home: https://github.com/fosrl/newt
-host_mounts: []
+host_mounts:
+- description: Docker socket
+  host_path: /var/run/docker.sock
 icon: https://media.sys.truenas.net/apps/newt/icons/icon.svg
 keywords:
 - tunneling
 - proxy
 - wireguard
 - pangolin
-lib_version: 2.1.77
-lib_version_hash: 1837f8e69ae1adc313330c3b1c2615e9b4d03c5459d657a5898bae78090f8195
+lib_version: 2.3.4
+lib_version_hash: 2e3a8847308fb2eb0da046018f287c73822c094b5950a10377c3235794ff1242
 maintainers:
 - email: dev@truenas.com
   name: truenas
@@ -31,7 +33,6 @@ run_as_context:
 screenshots: []
 sources:
 - https://github.com/fosrl/newt
-- https://hub.docker.com/r/fosrl/newt
 title: Newt
 train: community
-version: 1.0.36
+version: 1.1.17

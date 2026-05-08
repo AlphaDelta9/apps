@@ -1,0 +1,34 @@
+{% set tpl = ix_lib.base.render.Render(values) %}
+
+{% set crowdsec_container = tpl.add_container(values.consts.crowdsec_container_name, values.crowdsec.image_selector) %}
+{% do crowdsec_container.set_tty(true) %}
+{% do crowdsec_container.set_stdin(true) %}
+
+{% do crowdsec_container.remove_security_opt("no-new-privileges") %}
+{% do crowdsec_container.add_security_opt("apparmor", "unconfined") %}
+
+{% do crowdsec_container.healthcheck.set_custom_test(["CMD", "crowdsec", "cscli capi status"]) %}
+
+{% do crowdsec_container.environment.add_env("COLLECTIONS", "crowdsecurity/linux") %}
+{% do crowdsec_container.environment.add_user_envs(values.crowdsec.additional_envs) %}
+
+{% do crowdsec_container.add_port(values.network.web_port) %}
+
+{% if values.crowdsec.docker_enable %}
+  {% do crowdsec_container.add_docker_socket(read_only=True) %}
+{% endif %}
+
+{% set perms_config = {"uid": values.run_as.user, "gid": values.run_as.group, "mode": "check"} %}
+{% do crowdsec_container.add_storage(values.consts.db_path, values.storage.db) %}
+{% do perm_container.add_or_skip_action("/var/lib/crowdsec/data", values.storage.db, perms_config) %}
+
+{% do crowdsec_container.add_storage(values.consts.config_path, values.storage.config) %}
+{% do perm_container.add_or_skip_action("/etc/crowdsec", values.storage.config, perms_config) %}
+
+{% for store in values.storage.additional_storage %}
+  {% do crowdsec_container.add_storage(store.mount_path, store) %}
+{% endfor %}
+
+{% do tpl.portals.add(values.network.web_port) %}
+
+{{ tpl.render() | tojson }}

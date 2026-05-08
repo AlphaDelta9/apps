@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: 9.2.1
+app_version: 9.8.0
 capabilities:
 - description: Calibre is able to change file ownership arbitrarily
   name: CHOWN
@@ -23,8 +23,8 @@ icon: https://media.sys.truenas.net/apps/calibre/icons/icon.png
 keywords:
 - media
 - ebooks
-lib_version: 2.1.77
-lib_version_hash: 1837f8e69ae1adc313330c3b1c2615e9b4d03c5459d657a5898bae78090f8195
+lib_version: 2.3.4
+lib_version_hash: 2e3a8847308fb2eb0da046018f287c73822c094b5950a10377c3235794ff1242
 maintainers:
 - email: dev@truenas.com
   name: truenas
@@ -49,4 +49,4 @@ sources:
 - https://calibre-ebook.com/
 title: Calibre
 train: community
-version: 1.1.34
+version: 1.2.12

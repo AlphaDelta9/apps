@@ -25,7 +25,7 @@ module.exports = {
       fileMatch: ["^ix-dev/.*/ix_values\\.yaml$"],
       // Matches the repository name and the tag of each image
       matchStrings: [
-        '\\s{4}repository: (?<depName>[^\\s]+)\\n\\s{4}tag: "?(?<currentValue>[^\\s"]+)"?',
+        "\\s{4}repository: (?<depName>[^\\s]+)\\n\\s{4}tag: [\"']?(?<currentValue>[^\\s\"']+)[\"']?",
       ],
       // Use the docker datasource on matched images
       datasourceTemplate: "docker",
@@ -92,7 +92,7 @@ module.exports = {
       ],
     ),
     customVersioning(
-      // YYYY-MM-DD-rN 
+      // YYYY-MM-DD-rN
       "^(?<major>\\d{4})-(?<minor>\\d{2})-(?<patch>\\d{2})-(?<build>r\\d+)$",
       ["ghcr.io/zoeyvid/npmplus"],
     ),
@@ -108,8 +108,9 @@ module.exports = {
       ["ghcr.io/linuxserver/diskover", "ghcr.io/linuxserver/calibre-web"],
     ),
     customVersioning(
+      // abc123-ls241
       "^(?<build>[a-z0-9]+)-ls(?<major>\\d{1})(?<minor>\\d{1})(?<patch>\\d{1})$",
-      ["ghcr.io/linuxserver/tvheadend"],
+      ["ghcr.io/linuxserver/tvheadend", "ghcr.io/linuxserver/lazylibrarian"],
     ),
     customVersioning(
       // v0.8.1-omnibus
@@ -142,8 +143,8 @@ module.exports = {
       ["jenkins/jenkins"],
     ),
     customVersioning(
-      // 1.2.3.4, but not 1.2.0.4 (3rd digit 0 equals beta)
-      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>[1-9]\\d*)\\.(?<build>\\d+)$",
+      // 1.2.3.0, but not 1.2.3.4 (4th digit != 0 equals beta)
+      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)\\.0$",
       ["emby/embyserver"],
     ),
     customVersioning(
@@ -212,13 +213,18 @@ module.exports = {
       ["ghcr.io/koush/scrypted"],
     ),
     customVersioning(
-      // 24.7
+      // v24.7
       "^v(?<major>\\d+)\\.(?<minor>\\d+)$",
       ["nzbgetcom/nzbget"],
     ),
     customVersioning(
-      // tshock-1.4.4.9-5.2.0-3
-      "^tshock-1\\.4\\.4\\.9-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-(?<build>\\d+))?$",
+      // 0.96
+      "^(?<major>\\d+)\\.(?<minor>\\d+)$",
+      ["bbernhard/signal-cli-rest-api"],
+    ),
+    customVersioning(
+      // vanilla-1.4.4.9
+      "^vanilla-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)\\.(?<build>\\d+)(-\\d+)?$",
       ["ryshe/terraria"],
     ),
     customVersioning(
@@ -307,13 +313,8 @@ module.exports = {
       ["ghcr.io/coollabsio/coolify"],
     ),
     customVersioning(
-      // some-app-1.0.2
-      "^.+-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
-      ["opencloudeu/web-extensions"],
-    ),
-    customVersioning(
       // appname-1.2.3
-      "^(?<compatibility>draw-io|progress-bars|json-viewer|external-sites|unzip|cast|importer|arcade|maps)-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
+      "^(?<compatibility>arcade|calculator|cast|draw-io|external-sites|importer|json-viewer|maps|pastebin|progress-bars|unzip)-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
       ["opencloudeu/web-extensions"],
     ),
     customVersioning(
@@ -323,7 +324,7 @@ module.exports = {
     ),
     customVersioning(
       // 10.0.160-mongo8
-      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-mongo8$",
+      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
       ["ghcr.io/goofball222/unifi"],
     ),
     customVersioning(
@@ -335,6 +336,16 @@ module.exports = {
       // component-1.2.3
       "^(?<compatibility>backend|frontend|fc-worker-api|fc-worker-celery)-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
       ["amrit3701/lens"],
+    ),
+    customVersioning(
+      // release-1.11.0
+      "^release-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
+      ["ghcr.io/lukegus/termix"],
+    ),
+    customVersioning(
+      // slim-v1.12.2
+      "^slim-v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
+      ["itzcrazykns1337/vane"],
     ),
   ],
 };

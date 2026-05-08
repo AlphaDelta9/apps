@@ -1,7 +1,9 @@
 words:
   - 2fauth
+  - ACPI
   - adguard
   - adventurelog
+  - aiostreams
   - airtable
   - aistor
   - aliyun
@@ -22,9 +24,11 @@ words:
   - autobrr
   - automaticrippingmachine
   - autoupdate
+  - autoxpose
   - backblaze
   - baserow
   - bazarr
+  - bearbinary
   - bentopdf
   - beszel
   - bichon
@@ -35,8 +39,11 @@ words:
   - bitmonero
   - bitnami
   - blakeblackshear
+  - blinko
   - blocklist
   - bookdrop
+  - borgwarehouse
+  - boxarr
   - briefkasten
   - bwlimit
   - byparr
@@ -47,6 +54,7 @@ words:
   - changeip
   - chatwoot
   - chrislusf
+  - chromedp
   - chunksize
   - cifs
   - clamav
@@ -54,11 +62,13 @@ words:
   - cleanuparr
   - cloudbeaver
   - cloudflared
+  - cloudreve
   - codegate
   - collabora
   - concourse
   - consts
   - containerd
+  - continuwuity
   - convertx
   - cooldown
   - coolify
@@ -68,6 +78,7 @@ words:
   - crontasks
   - cuda
   - cyfershepard
+  - databasus
   - datasource
   - datasources
   - dawarich
@@ -82,6 +93,7 @@ words:
   - directus
   - diskover
   - diskoverdata
+  - dispatcharr
   - dnsmasq
   - dnsomatic
   - dnspod
@@ -92,9 +104,11 @@ words:
   - domeneshop
   - dominio
   - dondominio
+  - donetick
   - dozzle
   - drawio
   - dreamhost
+  - dropgate
   - duckdns
   - duplicati
   - dxflrs
@@ -109,6 +123,7 @@ words:
   - endmacro
   - endswith
   - esphome
+  - evcc
   - excalidraw
   - factorio
   - familytree
@@ -120,6 +135,7 @@ words:
   - filestash
   - fireflyiii
   - fireshare
+  - fladder
   - flaresolverr
   - forgejo
   - fowner
@@ -131,6 +147,7 @@ words:
   - ftlconf
   - ftpd
   - funcs
+  - gameyfin
   - gandi
   - gaseousgames
   - gatus
@@ -147,7 +164,9 @@ words:
   - graalvm
   - grampsdb
   - grampsweb
+  - grimmory
   - grocy
+  - guacd
   - gunicorn
   - harverster
   - hashpw
@@ -156,6 +175,7 @@ words:
   - healthchecks
   - healthz
   - hetzner
+  - hetznercloud
   - hexparrot
   - hmac
   - homarr
@@ -166,10 +186,13 @@ words:
   - htpasswd
   - htsp
   - huntarr
+  - hyos
+  - hytale
   - icanhazip
   - iconik
   - igdb
   - immich
+  - infraprovider
   - initdb
   - inkl
   - invoiceninja
@@ -306,15 +329,20 @@ words:
   - odoo
   - ollama
   - omada
+  - omni
+  - omnictl
   - omnom
+  - onepassword
   - onlyoffice
   - opcache
   - openai
   - openarchiver
+  - openclaw
   - opencloud
   - opendns
   - openj
   - openspeedtest
+  - openuem
   - openvino
   - oper
   - organizr
@@ -324,6 +352,7 @@ words:
   - papra
   - passbolt
   - passcode
+  - pastebin
   - pecl
   - penpot
   - perfmon
@@ -355,8 +384,10 @@ words:
   - proxying
   - publicip
   - publicipv
+  - pulsarr
   - pwuser
   - qbittorrent
+  - qdrant
   - quic
   - rackula
   - radarr
@@ -389,6 +420,7 @@ words:
   - rustfs
   - ryshe
   - sabnzbd
+  - scaleway
   - scandir
   - scrollbars
   - scrypted
@@ -396,6 +428,7 @@ words:
   - seaweedfs
   - seccomp
   - seeip
+  - seerr
   - selfhost
   - selfhost.de
   - selfhostde
@@ -409,6 +442,7 @@ words:
   - sftpd
   - sftpgo
   - shaneisrael
+  - shelfmark
   - shlink
   - shmall
   - shmmax
@@ -418,6 +452,7 @@ words:
   - shoutrrr
   - sickgear
   - sidekiq
+  - sidero
   - sigdb
   - signup
   - slskd
@@ -429,6 +464,7 @@ words:
   - sonarr
   - soulseek
   - spdyn
+  - splitpro
   - spotnet
   - spottar
   - spottarr
@@ -436,6 +472,7 @@ words:
   - startpage
   - startswith
   - stashapp
+  - stdapi
   - storagenode
   - storjlabs
   - strato
@@ -445,6 +482,7 @@ words:
   - sysctls
   - tailscale
   - tailscaled
+  - talos
   - tandoor
   - tautulli
   - tdarr
@@ -453,6 +491,7 @@ words:
   - tensorchord
   - tensorrt
   - termix
+  - teslamate
   - tesseract
   - tftpboot
   - tftpd
@@ -463,6 +502,7 @@ words:
   - tmdb
   - tmpfs
   - tojson
+  - toparr
   - traccar
   - tracearr
   - tracebacklimit
@@ -477,6 +517,7 @@ words:
   - twofactor
   - twofauth
   - typesense
+  - UEFI
   - umami
   - unifi
   - unmanic
@@ -488,11 +529,13 @@ words:
   - variomedia
   - vaultwarden
   - vectorchord
+  - vercel
   - versity
   - versitygw
   - vhost
   - vikunja
   - vitransfer
+  - vllm
   - wabayang
   - warracker
   - webapi
@@ -511,6 +554,7 @@ words:
   - wtfismyip
   - wyze
   - xattr
+  - xmrig
   - yamtrack
   - zammad
   - zenika
@@ -521,4 +565,6 @@ words:
   - zksync
   - zoneedit
   - zoraxy
+  - zpool
+  - zvols
   - zwave
