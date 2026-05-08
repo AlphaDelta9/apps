@@ -3,6 +3,10 @@ resources:
     cpus: 1.0
     memory: 256
 
+run_as:
+  user: 568
+  group: 568
+
 crowdsec:
   image_selector: image
   docker_enable: true
