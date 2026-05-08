@@ -1,0 +1,10 @@
+images:
+  image:
+    repository: crowdsecurity/crowdsec
+    tag: "v1.7.7"
+  image-slim:
+    repository: crowdsecurity/crowdsec
+    tag: "v1.7.7-slim"
+
+consts:
+  crowdsec_container_name: crowdsec
