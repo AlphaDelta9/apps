@@ -3,7 +3,7 @@ resources:
     cpus: 1.0
     memory: 256
 
-glances:
+crowdsec:
   image_selector: image
   docker_enable: true
 
