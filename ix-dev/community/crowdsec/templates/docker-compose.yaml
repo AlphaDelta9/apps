@@ -19,10 +19,10 @@
 {% endif %}
 
 {% set perms_config = {"uid": values.run_as.user, "gid": values.run_as.group, "mode": "check"} %}
-{% do crowdsec_container.add_storage(values.consts.data_path, values.storage.data) %}
+{% do crowdsec_container.add_storage(values.consts.db_path, values.storage.db) %}
 {% do perm_container.add_or_skip_action("/var/lib/crowdsec/data", values.storage.db, perms_config) %}
 
-{% do crowdsec_container.add_storage(values.consts.plugins_path, values.storage.plugins) %}
+{% do crowdsec_container.add_storage(values.consts.config_path, values.storage.config) %}
 {% do perm_container.add_or_skip_action("/etc/crowdsec", values.storage.config, perms_config) %}
 
 {% for store in values.storage.additional_storage %}
