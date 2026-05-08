@@ -1,6 +1,5 @@
 app_version: v1.7.7
 capabilities: []
-- network
 categories:
 - security
 changelog_url: https://github.com/crowdsecurity/crowdsec/releases
