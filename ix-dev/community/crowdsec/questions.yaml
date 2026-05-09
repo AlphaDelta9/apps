@@ -33,9 +33,9 @@ questions:
             type: string
             default: image
             enum:
-              - value: image
+              - value: image-slim
                 description: Image with minimal dependencies
-              - value: full_image
+              - value: image
                 description: Image with all dependencies
         - variable: docker_enable
           label: Enable Docker Monitoring Mode
