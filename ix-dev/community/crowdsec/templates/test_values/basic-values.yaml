@@ -12,7 +12,7 @@ crowdsec:
   docker_enable: true
 
 network:
-  web_port:
+  api_port:
     bind_mode: published
     port_number: 8080
 

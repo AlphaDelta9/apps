@@ -9,7 +9,7 @@
 {% do crowdsec_container.environment.add_env("COLLECTIONS", "crowdsecurity/linux") %}
 {% do crowdsec_container.environment.add_user_envs(values.crowdsec.additional_envs) %}
 
-{% do crowdsec_container.add_port(values.network.web_port) %}
+{% do crowdsec_container.add_port(values.network.api_port) %}
 
 {% if values.crowdsec.docker_enable %}
   {% do crowdsec_container.add_docker_socket(read_only=True) %}
@@ -23,6 +23,6 @@
   {% do crowdsec_container.add_storage(store.mount_path, store) %}
 {% endfor %}
 
-{% do tpl.portals.add(values.network.web_port) %}
+{% do tpl.portals.add(values.network.api_port) %}
 
 {{ tpl.render() | tojson }}
