@@ -6,7 +6,7 @@
 
 {% do crowdsec_container.healthcheck.set_custom_test(["CMD", "cscli", "lapi", "status"]) %}
 
-{% do crowdsec_container.environment.add_env("COLLECTIONS", "values.crowdsec.collections") %}
+{% do crowdsec_container.environment.add_env("COLLECTIONS", values.crowdsec.collections) %}
 {% do crowdsec_container.environment.add_user_envs(values.crowdsec.additional_envs) %}
 
 {% do crowdsec_container.add_port(values.network.api_port) %}
