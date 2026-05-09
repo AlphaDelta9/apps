@@ -9,6 +9,7 @@ run_as:
 
 crowdsec:
   image_selector: image
+  collections: "crowdsecurity/linux"
   docker_enable: true
 
 network:
