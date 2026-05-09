@@ -413,8 +413,8 @@ questions:
                         type: string
                         required: true
                         enum:
-                          - value: Crowdsec
-                            description: Crowdsec
+                          - value: crowdsec
+                            description: crowdsec
 
   - variable: resources
     label: ""
