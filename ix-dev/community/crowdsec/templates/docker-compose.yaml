@@ -4,7 +4,7 @@
 {% do crowdsec_container.set_tty(true) %}
 {% do crowdsec_container.set_stdin(true) %}
 
-{% do crowdsec_container.healthcheck.set_custom_test(["CMD", "crowdsec", "cscli capi status"]) %}
+{% do crowdsec_container.healthcheck.set_custom_test(["CMD", "cscli", "capi status"]) %}
 
 {% do crowdsec_container.environment.add_env("COLLECTIONS", "crowdsecurity/linux") %}
 {% do crowdsec_container.environment.add_user_envs(values.crowdsec.additional_envs) %}
