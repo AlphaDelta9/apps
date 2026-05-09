@@ -37,12 +37,13 @@ questions:
                 description: Image with minimal dependencies
               - value: image
                 description: Image with all dependencies
-        - variable: docker_enable
-          label: Enable Docker Monitoring Mode
-          description: Enable to allow Crowdsec to see Docker Containers on your system.
+        - variable: collections
+          label: Collections
+          description: The collections to enable for Crowdsec.
           schema:
-            type: boolean
-            default: false
+            type: string
+            default: "crowdsecurity/linux"
+            required: true
         - variable: additional_envs
           label: Additional Environment Variables
           schema:
@@ -63,6 +64,12 @@ questions:
                       label: Value
                       schema:
                         type: string
+        - variable: docker_enable
+          label: Enable Docker Monitoring Mode
+          description: Enable to allow Crowdsec to see Docker Containers on your system.
+          schema:
+            type: boolean
+            default: false
   - variable: network
     label: ""
     group: Network Configuration
@@ -155,8 +162,8 @@ questions:
                                     type: string
                                     required: true
                                     enum:
-                                      - value: Crowdsec
-                                        description: Crowdsec
+                                      - value: crowdsec
+                                        description: crowdsec
                                 - variable: config
                                   label: Container Network Configuration
                                   schema:
