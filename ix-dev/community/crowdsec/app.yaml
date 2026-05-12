@@ -3,19 +3,18 @@ capabilities: []
 categories:
 - security
 changelog_url: https://github.com/crowdsecurity/crowdsec/releases
-date_added: '2025-05-05'
+date_added: '2025-05-12'
 description: CrowdSec is an open-source and collaborative security engine that parses
   logs and blocks malicious IPs.
 home: https://docs.crowdsec.net
 host_mounts:
 - description: Required to read the docker information.
   host_path: /var/run/docker.sock
-icon: https://media.sys.truenas.net/apps/crowdsec/icons/icon.
-screenshots: []
+icon: https://media.sys.truenas.net/apps/crowdsec/icons/icon.svg
 keywords:
 - security
-lib_version: 2.3.4
-lib_version_hash: 2e3a8847308fb2eb0da046018f287c73822c094b5950a10377c3235794ff1242
+lib_version: 2.3.5
+lib_version_hash: c0d042e3de6350fae9aee546d3c79bc0accf1f2011da89cc1ebff29421aa7fc9
 maintainers:
 - email: dev@truenas.com
   name: truenas
@@ -27,8 +26,9 @@ run_as_context:
   group_name: Host group is [root]
   uid: 0
   user_name: Host user is [root]
+screenshots: []
 sources:
 - https://hub.docker.com/r/crowdsecurity/crowdsec
 title: CrowdSec
 train: community
-version: 1.0.1
+version: 1.0.0
