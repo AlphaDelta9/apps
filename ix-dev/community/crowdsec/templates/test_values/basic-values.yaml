@@ -1,7 +1,7 @@
 resources:
   limits:
-    cpus: 1.0
-    memory: 256
+    cpus: 2.0
+    memory: 4096
 
 run_as:
   user: 568
@@ -9,17 +9,18 @@ run_as:
 
 crowdsec:
   image_selector: image
-  collections: "crowdsecurity/linux"
+  collections:
+    - "crowdsecurity/linux"
   docker_enable: true
 
 network:
   api_port:
     bind_mode: published
-    port_number: 8080
+    port_number: 8085
 
 ix_volumes:
-  db: /var/tests/lib/crowdsec/data
-  config: /etc/tests/crowdsec
+  db: /opt/tests/mnt/crowdsec/db
+  config: /opt/tests/mnt/crowdsec/config
 
 storage:
   db:

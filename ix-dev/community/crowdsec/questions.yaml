@@ -33,17 +33,29 @@ questions:
             type: string
             default: image
             enum:
-              - value: image-slim
+              - value: slim_image
                 description: Image with minimal dependencies
               - value: image
                 description: Image with all dependencies
+        - variable: docker_enable
+          label: Enable Docker Monitoring Mode
+          description: Enable to allow Crowdsec to see Docker Containers on your system.
+          schema:
+            type: boolean
+            default: false
         - variable: collections
           label: Collections
           description: The collections to enable for Crowdsec.
           schema:
-            type: string
-            default: "crowdsecurity/linux"
-            required: true
+            type: list
+            default: ["crowdsecurity/linux"]
+            min: 1
+            items:
+              - variable: collection
+                label: Collection
+                schema:
+                  type: string
+                  required: true
         - variable: additional_envs
           label: Additional Environment Variables
           schema:
@@ -64,12 +76,7 @@ questions:
                       label: Value
                       schema:
                         type: string
-        - variable: docker_enable
-          label: Enable Docker Monitoring Mode
-          description: Enable to allow Crowdsec to see Docker Containers on your system.
-          schema:
-            type: boolean
-            default: false
+
   - variable: network
     label: ""
     group: Network Configuration
@@ -441,12 +448,3 @@ questions:
                   type: int
                   default: 4096
                   required: true
-
-        - variable: gpus
-          group: Resources Configuration
-          label: GPU Configuration
-          schema:
-            type: dict
-            $ref:
-              - "definitions/gpu_configuration"
-            attrs: []
