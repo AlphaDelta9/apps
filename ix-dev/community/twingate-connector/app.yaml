@@ -2,7 +2,7 @@ app_version: 1.88.0
 capabilities: []
 categories:
 - networking
-changelog_url: https://www.twingate.com/changelog/connector
+changelog_url: https://www.twingate.com/changelog
 date_added: '2026-02-03'
 description: Identity-based access for users, services, and AI agents that deploys
   in minutes, scales to every resource, and finally lets you retire your VPN.
@@ -30,4 +30,4 @@ sources:
 - https://www.twingate.com/
 title: Twingate Connector
 train: community
-version: 1.1.10
+version: 1.1.9
