@@ -1,4 +1,4 @@
-app_version: 2026.4.5
+app_version: 2026.8.1
 capabilities:
 - description: ESPHome is able to use raw and packet sockets
   name: NET_RAW
@@ -30,7 +30,8 @@ run_as_context:
   user_name: Host user is [root]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/esphome_community/
 - https://github.com/esphome/esphome
 title: ESPHome
 train: community
-version: 1.2.19
+version: 1.2.36

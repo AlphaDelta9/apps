@@ -1,4 +1,4 @@
-app_version: 6.13.3
+app_version: 6.15.3
 capabilities: []
 categories:
 - productivity
@@ -31,7 +31,8 @@ run_as_context:
   user_name: Host user is [root]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/traccar_community/
 - https://github.com/traccar/traccar
 title: Traccar
 train: community
-version: 1.2.18
+version: 1.2.36

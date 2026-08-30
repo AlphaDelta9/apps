@@ -1,18 +1,18 @@
 {
-    "1.6.10": {
+    "1.6.25": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/linkding/1.6.10",
-        "last_update": "2026-04-27 11:53:24",
+        "location": "/__w/apps/apps/trains/community/linkding/1.6.25",
+        "last_update": "2026-08-24 12:53:14",
         "required_features": [],
-        "human_version": "1.45.0_1.6.10",
-        "version": "1.6.10",
+        "human_version": "1.46.2_1.6.25",
+        "version": "1.6.25",
         "app_metadata": {
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "1.45.0",
+            "app_version": "1.46.2",
             "capabilities": [],
             "categories": [
                 "productivity"
@@ -56,12 +56,13 @@
                 "https://media.sys.truenas.net/apps/linkding/screenshots/screenshot1.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/linkding_community/",
                 "https://github.com/sissbruecker/linkding",
                 "https://hub.docker.com/r/sissbruecker/linkding/"
             ],
             "title": "Linkding",
             "train": "community",
-            "version": "1.6.10"
+            "version": "1.6.25"
         },
         "schema": {
             "groups": [
@@ -154,7 +155,6 @@
                             {
                                 "variable": "db_password",
                                 "label": "Database Password",
-                                "description": "The password for Linkding Database.",
                                 "schema": {
                                     "type": "string",
                                     "default": "",
@@ -1266,7 +1266,7 @@
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "1.45.0",
+            "app_version": "1.46.2",
             "capabilities": [],
             "categories": [
                 "productivity"
@@ -1310,12 +1310,13 @@
                 "https://media.sys.truenas.net/apps/linkding/screenshots/screenshot1.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/linkding_community/",
                 "https://github.com/sissbruecker/linkding",
                 "https://hub.docker.com/r/sissbruecker/linkding/"
             ],
             "title": "Linkding",
             "train": "community",
-            "version": "1.6.10"
+            "version": "1.6.25"
         }
     }
 }

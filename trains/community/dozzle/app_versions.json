@@ -1,15 +1,15 @@
 {
-    "1.1.24": {
+    "1.1.44": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/dozzle/1.1.24",
-        "last_update": "2026-05-06 12:01:56",
+        "location": "/__w/apps/apps/trains/community/dozzle/1.1.44",
+        "last_update": "2026-08-28 16:27:53",
         "required_features": [],
-        "human_version": "v10.5.2_1.1.24",
-        "version": "1.1.24",
+        "human_version": "v10.7.5_1.1.44",
+        "version": "1.1.44",
         "app_metadata": {
-            "app_version": "v10.5.2",
+            "app_version": "v10.7.5",
             "capabilities": [],
             "categories": [
                 "monitoring"
@@ -49,11 +49,12 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/dozzle_community/",
                 "https://github.com/amir20/dozzle"
             ],
             "title": "Dozzle",
             "train": "community",
-            "version": "1.1.24"
+            "version": "1.1.44"
         },
         "schema": {
             "groups": [
@@ -103,6 +104,15 @@
                     "schema": {
                         "type": "dict",
                         "attrs": [
+                            {
+                                "variable": "mount_docker_socket",
+                                "label": "Mount Docker Socket",
+                                "description": "Mount the Docker socket to allow access to Docker containers.",
+                                "schema": {
+                                    "type": "boolean",
+                                    "default": true
+                                }
+                            },
                             {
                                 "variable": "additional_envs",
                                 "label": "Additional Environment Variables",
@@ -802,7 +812,7 @@
         "readme": "<h1>Dozzle</h1> <p><a href=\"https://dozzle.dev\">Dozzle</a> - Realtime log viewer for docker containers.</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "v10.5.2",
+            "app_version": "v10.7.5",
             "capabilities": [],
             "categories": [
                 "monitoring"
@@ -842,11 +852,12 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/dozzle_community/",
                 "https://github.com/amir20/dozzle"
             ],
             "title": "Dozzle",
             "train": "community",
-            "version": "1.1.24"
+            "version": "1.1.44"
         }
     }
 }

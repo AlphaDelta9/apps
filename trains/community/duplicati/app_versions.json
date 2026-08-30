@@ -1,15 +1,15 @@
 {
-    "1.1.7": {
+    "1.1.11": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/duplicati/1.1.7",
-        "last_update": "2026-04-27 13:27:06",
+        "location": "/__w/apps/apps/trains/community/duplicati/1.1.11",
+        "last_update": "2026-08-12 15:28:59",
         "required_features": [],
-        "human_version": "2.3.0.1-stable_1.1.7",
-        "version": "1.1.7",
+        "human_version": "2.3.0.4-stable_1.1.11",
+        "version": "1.1.11",
         "app_metadata": {
-            "app_version": "2.3.0.1-stable",
+            "app_version": "2.3.0.4-stable",
             "capabilities": [],
             "categories": [
                 "backup"
@@ -44,12 +44,13 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/duplicati_community/",
                 "https://github.com/duplicati/duplicati",
                 "https://hub.docker.com/r/duplicati/duplicati"
             ],
             "title": "Duplicati",
             "train": "community",
-            "version": "1.1.7"
+            "version": "1.1.11"
         },
         "schema": {
             "groups": [
@@ -116,7 +117,8 @@
                                 "description": "The encryption key for Duplicati.</br>\nLeave empty to disable encryption.\n",
                                 "schema": {
                                     "type": "string",
-                                    "default": ""
+                                    "default": "",
+                                    "private": true
                                 }
                             },
                             {
@@ -962,7 +964,7 @@
         "readme": "<h1>Duplicati</h1> <p><a href=\"https://duplicati.com\">Duplicati</a> is a backup client that securely stores encrypted backups in the cloud!</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "2.3.0.1-stable",
+            "app_version": "2.3.0.4-stable",
             "capabilities": [],
             "categories": [
                 "backup"
@@ -997,12 +999,13 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/duplicati_community/",
                 "https://github.com/duplicati/duplicati",
                 "https://hub.docker.com/r/duplicati/duplicati"
             ],
             "title": "Duplicati",
             "train": "community",
-            "version": "1.1.7"
+            "version": "1.1.11"
         }
     }
 }

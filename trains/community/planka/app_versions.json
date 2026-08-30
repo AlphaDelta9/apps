@@ -1,18 +1,18 @@
 {
-    "2.3.13": {
+    "2.3.28": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/planka/2.3.13",
-        "last_update": "2026-04-30 13:06:06",
+        "location": "/__w/apps/apps/trains/community/planka/2.3.28",
+        "last_update": "2026-08-24 12:53:14",
         "required_features": [],
-        "human_version": "2.1.1_2.3.13",
-        "version": "2.3.13",
+        "human_version": "2.2.1_2.3.28",
+        "version": "2.3.28",
         "app_metadata": {
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "2.1.1",
+            "app_version": "2.2.1",
             "capabilities": [],
             "categories": [
                 "productivity"
@@ -58,11 +58,12 @@
                 "https://media.sys.truenas.net/apps/planka/screenshots/screenshot1.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/planka_community/",
                 "https://github.com/plankanban/planka"
             ],
             "title": "Planka",
             "train": "community",
-            "version": "2.3.13"
+            "version": "2.3.28"
         },
         "schema": {
             "groups": [
@@ -122,7 +123,6 @@
                             {
                                 "variable": "db_password",
                                 "label": "Database Password",
-                                "description": "The password for Planka.",
                                 "schema": {
                                     "type": "string",
                                     "default": "",
@@ -1977,7 +1977,7 @@
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "2.1.1",
+            "app_version": "2.2.1",
             "capabilities": [],
             "categories": [
                 "productivity"
@@ -2023,11 +2023,12 @@
                 "https://media.sys.truenas.net/apps/planka/screenshots/screenshot1.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/planka_community/",
                 "https://github.com/plankanban/planka"
             ],
             "title": "Planka",
             "train": "community",
-            "version": "2.3.13"
+            "version": "2.3.28"
         }
     }
 }

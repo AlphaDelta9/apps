@@ -1,18 +1,18 @@
 {
-    "1.4.7": {
+    "1.4.9": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/omada-controller/1.4.7",
-        "last_update": "2026-04-29 11:39:33",
+        "location": "/__w/apps/apps/trains/community/omada-controller/1.4.9",
+        "last_update": "2026-07-20 11:47:46",
         "required_features": [],
-        "human_version": "6.2.10.17_1.4.7",
-        "version": "1.4.7",
+        "human_version": "6.2.14.11_1.4.9",
+        "version": "1.4.9",
         "app_metadata": {
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "6.2.10.17",
+            "app_version": "6.2.14.11",
             "capabilities": [
                 {
                     "description": "Omada Controller is able to change file ownership arbitrarily",
@@ -71,12 +71,13 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/omada-controller_community/",
                 "https://github.com/mbentley/docker-omada-controller",
                 "https://hub.docker.com/r/mbentley/omada-controller"
             ],
             "title": "Omada Controller",
             "train": "community",
-            "version": "1.4.7"
+            "version": "1.4.9"
         },
         "schema": {
             "groups": [
@@ -2074,7 +2075,7 @@
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "6.2.10.17",
+            "app_version": "6.2.14.11",
             "capabilities": [
                 {
                     "description": "Omada Controller is able to change file ownership arbitrarily",
@@ -2133,12 +2134,13 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/omada-controller_community/",
                 "https://github.com/mbentley/docker-omada-controller",
                 "https://hub.docker.com/r/mbentley/omada-controller"
             ],
             "title": "Omada Controller",
             "train": "community",
-            "version": "1.4.7"
+            "version": "1.4.9"
         }
     }
 }

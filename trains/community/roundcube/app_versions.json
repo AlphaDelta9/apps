@@ -1,18 +1,18 @@
 {
-    "1.6.12": {
+    "1.6.29": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/roundcube/1.6.12",
-        "last_update": "2026-04-27 11:53:24",
+        "location": "/__w/apps/apps/trains/community/roundcube/1.6.29",
+        "last_update": "2026-08-24 12:53:14",
         "required_features": [],
-        "human_version": "1.6.15-apache_1.6.12",
-        "version": "1.6.12",
+        "human_version": "1.7.3-apache_1.6.29",
+        "version": "1.6.29",
         "app_metadata": {
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "1.6.15-apache",
+            "app_version": "1.7.3-apache",
             "capabilities": [
                 {
                     "description": "Roundcube is able to change file ownership arbitrarily",
@@ -82,12 +82,13 @@
                 "https://media.sys.truenas.net/apps/roundcube/screenshots/screenshot5.png"
             ],
             "sources": [
-                "https://roundcube.net/",
-                "https://hub.docker.com/r/roundcube/roundcubemail/"
+                "https://apps.truenas.com/catalog/roundcube_community/",
+                "https://hub.docker.com/r/roundcube/roundcubemail/",
+                "https://roundcube.net/"
             ],
             "title": "Roundcube",
             "train": "community",
-            "version": "1.6.12"
+            "version": "1.6.29"
         },
         "schema": {
             "groups": [
@@ -143,7 +144,6 @@
                             {
                                 "variable": "db_password",
                                 "label": "Database Password",
-                                "description": "The password for Roundcube.",
                                 "schema": {
                                     "type": "string",
                                     "default": "",
@@ -1518,7 +1518,7 @@
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "1.6.15-apache",
+            "app_version": "1.7.3-apache",
             "capabilities": [
                 {
                     "description": "Roundcube is able to change file ownership arbitrarily",
@@ -1588,12 +1588,13 @@
                 "https://media.sys.truenas.net/apps/roundcube/screenshots/screenshot5.png"
             ],
             "sources": [
-                "https://roundcube.net/",
-                "https://hub.docker.com/r/roundcube/roundcubemail/"
+                "https://apps.truenas.com/catalog/roundcube_community/",
+                "https://hub.docker.com/r/roundcube/roundcubemail/",
+                "https://roundcube.net/"
             ],
             "title": "Roundcube",
             "train": "community",
-            "version": "1.6.12"
+            "version": "1.6.29"
         }
     }
 }

@@ -15,10 +15,12 @@ words:
   - arcadiatechnology
   - archisteamfarm
   - archiver
+  - arrvantage
   - arti
   - asigra
   - audiobook
   - audiobookshelf
+  - audiomuse
   - authelia
   - authentik
   - autobrr
@@ -26,6 +28,7 @@ words:
   - autoupdate
   - autoxpose
   - backblaze
+  - bambuddy
   - baserow
   - bazarr
   - bearbinary
@@ -42,6 +45,7 @@ words:
   - blinko
   - blocklist
   - bookdrop
+  - bookorbit
   - borgwarehouse
   - boxarr
   - briefkasten
@@ -49,17 +53,22 @@ words:
   - byparr
   - c4illin
   - caddyfile
+  - calagopus
+  - cantinarr
   - castopod
   - changedetection
   - changeip
   - chatwoot
   - chrislusf
+  - chromadb
   - chromedp
   - chunksize
   - cifs
+  - cinedock
   - clamav
   - clamd
   - cleanuparr
+  - clonarr
   - cloudbeaver
   - cloudflared
   - cloudreve
@@ -100,6 +109,7 @@ words:
   - dnspod
   - dockge
   - dockpeek
+  - dockroute
   - docspell
   - documentserver
   - domeneshop
@@ -124,6 +134,7 @@ words:
   - endmacro
   - endswith
   - esphome
+  - eurooffice
   - evcc
   - excalidraw
   - factorio
@@ -155,6 +166,7 @@ words:
   - gdrive
   - gensalt
   - getmeili
+  - ghostfolio
   - gitea
   - globalping
   - godaddy
@@ -162,6 +174,7 @@ words:
   - goipde
   - gotenberg
   - gotify
+  - gptwol
   - graalvm
   - grampsdb
   - grampsweb
@@ -186,6 +199,7 @@ words:
   - htauth
   - htpasswd
   - htsp
+  - huggingface
   - huntarr
   - hyos
   - hytale
@@ -193,6 +207,7 @@ words:
   - iconik
   - igdb
   - immich
+  - immichframe
   - infraprovider
   - initdb
   - inkl
@@ -220,6 +235,7 @@ words:
   - jenkins
   - jesec
   - jlesage
+  - jmap
   - joex
   - jorenn
   - kapowarr
@@ -227,6 +243,7 @@ words:
   - kasm
   - kavita
   - keepalive
+  - keeyo
   - kemal
   - keyfile
   - keyframes
@@ -239,10 +256,12 @@ words:
   - kuma
   - lancache
   - lancachenet
+  - languagetool
   - laravel
   - lazylibrarian
   - ldaps
   - librechat
+  - libredb
   - libsmbclient
   - lidarr
   - linkding
@@ -275,6 +294,7 @@ words:
   - meilisearch
   - meshcentral
   - metasearch
+  - metatana
   - metube
   - microcontrollers
   - mikefarah
@@ -310,10 +330,13 @@ words:
   - netcat
   - netcup
   - netdata
+  - netscope
   - nevu
   - nextauth
   - nextcloud
   - nextpvr
+  - nexview
+  - ngrams
   - njalla
   - nnev
   - nocodb
@@ -324,10 +347,12 @@ words:
   - npmplus
   - ntfy
   - nxzai
+  - nzbfast
   - nzbget
   - ocrmypdf
   - octoprint
   - odoo
+  - oikos
   - ollama
   - omada
   - omni
@@ -335,12 +360,14 @@ words:
   - omnom
   - onepassword
   - onlyoffice
+  - onvif
   - opcache
   - openai
   - openarchiver
   - openclaw
   - opencloud
   - opendns
+  - openhabittracker
   - openj
   - openspeedtest
   - openuem
@@ -355,6 +382,7 @@ words:
   - passcode
   - pastebin
   - pecl
+  - peertube
   - penpot
   - perfmon
   - pgadmin
@@ -370,6 +398,7 @@ words:
   - pihole
   - pipefail
   - piwigo
+  - plainnvr
   - planka
   - plankanban
   - plexinc
@@ -378,6 +407,8 @@ words:
   - porkbun
   - portracker
   - postgis
+  - powerbeacon
+  - poznote
   - predeploy
   - profilarr
   - prowlarr
@@ -393,6 +424,7 @@ words:
   - rackula
   - radarr
   - radicale
+  - ratelog
   - rawio
   - rcat
   - rclone
@@ -401,6 +433,7 @@ words:
   - readarr
   - realpath
   - recyclarr
+  - remux
   - requestrr
   - restic
   - retrom
@@ -425,6 +458,8 @@ words:
   - scandir
   - scrollbars
   - scrypted
+  - seadoc
+  - seafile
   - searxng
   - seaweedfs
   - seccomp
@@ -458,14 +493,17 @@ words:
   - signup
   - slskd
   - smbclient
+  - snapotter
   - snappdf
   - snmd
   - snsd
   - socketdir
   - sonarr
   - soulseek
+  - sparkyfitness
   - spdyn
   - splitpro
+  - sportarr
   - spotnet
   - spottar
   - spottarr
@@ -474,10 +512,12 @@ words:
   - startswith
   - stashapp
   - stdapi
+  - stlquest
   - storagenode
   - storjlabs
   - strato
   - subquestions
+  - swiparr
   - syncthing
   - sysadminsmedia
   - sysctls
@@ -507,6 +547,8 @@ words:
   - traccar
   - tracearr
   - tracebacklimit
+  - tracefinity
+  - travelbuff
   - trilium
   - triliumnext
   - trixie
@@ -520,12 +562,14 @@ words:
   - typesense
   - UEFI
   - umami
+  - umlautadaptarrex
   - unifi
   - unmanic
   - unpackerr
   - urbackup
   - userspace
   - utmp
+  - vaapi
   - valkey
   - variomedia
   - vaultwarden
@@ -538,11 +582,14 @@ words:
   - vitransfer
   - vllm
   - wabayang
+  - wallabag
   - warracker
+  - wealthfolio
   - webapi
   - webauthn
   - webdav
   - webdavd
+  - webmail
   - webrtc
   - webui
   - wger
@@ -557,6 +604,8 @@ words:
   - xattr
   - xmrig
   - yamtrack
+  - yunkan
+  - yuvomi
   - zammad
   - zenika
   - zerobyte

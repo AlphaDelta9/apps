@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: 17.9-bookworm
+app_version: 17.11-bookworm
 capabilities: []
 categories:
 - database
@@ -28,7 +28,8 @@ run_as_context:
   user_name: Host user is [netdata]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/postgres_community/
 - https://hub.docker.com/_/postgres
 title: Postgres
 train: community
-version: 1.5.8
+version: 1.5.25

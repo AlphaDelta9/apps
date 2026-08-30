@@ -1,4 +1,4 @@
-app_version: 2.1.0
+app_version: 3.0.4
 capabilities: []
 categories:
 - networking
@@ -26,7 +26,8 @@ run_as_context:
   user_name: Host user is [root]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/byparr_community/
 - https://github.com/ThePhaseless/Byparr
 title: Byparr
 train: community
-version: 1.1.5
+version: 1.1.9

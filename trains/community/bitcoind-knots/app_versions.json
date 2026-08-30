@@ -1,15 +1,15 @@
 {
-    "1.1.6": {
+    "1.1.11": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/bitcoind-knots/1.1.6",
-        "last_update": "2026-04-27 11:53:24",
+        "location": "/__w/apps/apps/trains/community/bitcoind-knots/1.1.11",
+        "last_update": "2026-08-10 11:52:48",
         "required_features": [],
-        "human_version": "v29.3_1.1.6",
-        "version": "1.1.6",
+        "human_version": "v29.3.3_1.1.11",
+        "version": "1.1.11",
         "app_metadata": {
-            "app_version": "v29.3",
+            "app_version": "v29.3.3",
             "capabilities": [],
             "categories": [
                 "financial"
@@ -45,12 +45,13 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/bitcoind-knots_community/",
                 "https://bitcoinknots.org",
                 "https://github.com/Retropex/docker-bitcoind-truenas"
             ],
             "title": "Bitcoin Knots",
             "train": "community",
-            "version": "1.1.6"
+            "version": "1.1.11"
         },
         "schema": {
             "groups": [
@@ -1419,7 +1420,7 @@
         "readme": "<h1>Bitcoin Knots</h1> <p>Run your personal node powered by <a href=\"https://bitcoinknots.org/\">Bitcoin Knots</a>.</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "v29.3",
+            "app_version": "v29.3.3",
             "capabilities": [],
             "categories": [
                 "financial"
@@ -1455,12 +1456,13 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/bitcoind-knots_community/",
                 "https://bitcoinknots.org",
                 "https://github.com/Retropex/docker-bitcoind-truenas"
             ],
             "title": "Bitcoin Knots",
             "train": "community",
-            "version": "1.1.6"
+            "version": "1.1.11"
         }
     }
 }

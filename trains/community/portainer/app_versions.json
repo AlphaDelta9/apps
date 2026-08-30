@@ -1,18 +1,18 @@
 {
-    "1.7.4": {
+    "1.7.10": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/portainer/1.7.4",
-        "last_update": "2026-04-30 13:40:05",
+        "location": "/__w/apps/apps/trains/community/portainer/1.7.10",
+        "last_update": "2026-08-27 14:30:37",
         "required_features": [],
-        "human_version": "2.41.0_1.7.4",
-        "version": "1.7.4",
+        "human_version": "2.45.0_1.7.10",
+        "version": "1.7.10",
         "app_metadata": {
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "2.41.0",
+            "app_version": "2.45.0",
             "capabilities": [],
             "categories": [
                 "management"
@@ -57,12 +57,13 @@
                 "https://media.sys.truenas.net/apps/portainer/screenshots/screenshot2.png"
             ],
             "sources": [
-                "https://www.portainer.io",
-                "https://github.com/portainer/portainer"
+                "https://apps.truenas.com/catalog/portainer_community/",
+                "https://github.com/portainer/portainer",
+                "https://www.portainer.io"
             ],
             "title": "Portainer",
             "train": "community",
-            "version": "1.7.4"
+            "version": "1.7.10"
         },
         "schema": {
             "groups": [
@@ -1118,7 +1119,7 @@
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "2.41.0",
+            "app_version": "2.45.0",
             "capabilities": [],
             "categories": [
                 "management"
@@ -1163,12 +1164,13 @@
                 "https://media.sys.truenas.net/apps/portainer/screenshots/screenshot2.png"
             ],
             "sources": [
-                "https://www.portainer.io",
-                "https://github.com/portainer/portainer"
+                "https://apps.truenas.com/catalog/portainer_community/",
+                "https://github.com/portainer/portainer",
+                "https://www.portainer.io"
             ],
             "title": "Portainer",
             "train": "community",
-            "version": "1.7.4"
+            "version": "1.7.10"
         }
     }
 }

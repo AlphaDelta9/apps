@@ -1,4 +1,4 @@
-app_version: 4.39.19
+app_version: 4.39.20
 capabilities: []
 categories:
 - authentication
@@ -36,7 +36,8 @@ run_as_context:
   user_name: Host user is [apps]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/authelia_community/
 - https://github.com/authelia/authelia
 title: Authelia
 train: community
-version: 1.2.20
+version: 1.2.36

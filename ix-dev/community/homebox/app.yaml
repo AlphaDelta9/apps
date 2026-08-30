@@ -1,4 +1,4 @@
-app_version: 0.25.0-rootless
+app_version: 0.26.2-rootless
 capabilities: []
 categories:
 - management
@@ -27,8 +27,9 @@ run_as_context:
 screenshots:
 - https://media.sys.truenas.net/apps/homebox/screenshots/screenshot1.png
 sources:
+- https://apps.truenas.com/catalog/homebox_community/
 - https://github.com/sysadminsmedia/homebox
 - https://homebox.software
 title: Homebox
 train: community
-version: 1.1.9
+version: 1.1.11

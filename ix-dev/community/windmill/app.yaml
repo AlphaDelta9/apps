@@ -1,4 +1,4 @@
-app_version: 1.698.0
+app_version: 1.798.1
 capabilities:
 - description: Worker Reports is able to change file ownership arbitrarily
   name: CHOWN
@@ -70,8 +70,9 @@ run_as_context:
   user_name: Host user is [root]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/windmill_community/
 - https://github.com/windmill-labs/windmill
 - https://www.windmill.dev/
 title: Windmill
 train: community
-version: 1.2.57
+version: 1.2.132

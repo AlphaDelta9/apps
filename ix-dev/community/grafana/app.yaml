@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: 13.0.1
+app_version: 13.2.0
 capabilities: []
 categories:
 - productivity
@@ -33,8 +33,9 @@ screenshots:
 - https://media.sys.truenas.net/apps/grafana/screenshots/screenshot1.png
 - https://media.sys.truenas.net/apps/grafana/screenshots/screenshot2.png
 sources:
-- https://hub.docker.com/r/grafana/grafana
+- https://apps.truenas.com/catalog/grafana_community/
 - https://github.com/grafana
+- https://hub.docker.com/r/grafana/grafana
 title: Grafana
 train: community
-version: 1.4.10
+version: 1.4.16

@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: 1.36.0
+app_version: 1.37.2
 capabilities: []
 categories:
 - security
@@ -35,7 +35,8 @@ run_as_context:
 screenshots:
 - https://media.sys.truenas.net/apps/vaultwarden/screenshots/screenshot1.png
 sources:
+- https://apps.truenas.com/catalog/vaultwarden_community/
 - https://github.com/dani-garcia/vaultwarden
 title: Vaultwarden
 train: community
-version: 1.6.14
+version: 1.6.29

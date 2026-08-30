@@ -1,4 +1,4 @@
-app_version: 0.11.34
+app_version: 0.12.3
 capabilities:
 - description: Open Terminal is able to change group ID of processes
   name: SETGID
@@ -32,7 +32,8 @@ run_as_context:
   user_name: Host user is [apps]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/open-terminal_community/
 - https://github.com/open-webui/open-terminal
 title: Open Terminal
 train: community
-version: 1.0.20
+version: 1.0.26

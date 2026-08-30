@@ -1,15 +1,15 @@
 {
-    "1.0.30": {
+    "1.0.40": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/openclaw/1.0.30",
-        "last_update": "2026-05-08 13:48:58",
+        "location": "/__w/apps/apps/trains/community/openclaw/1.0.40",
+        "last_update": "2026-08-21 13:34:39",
         "required_features": [],
-        "human_version": "2026.5.7_1.0.30",
-        "version": "1.0.30",
+        "human_version": "2026.7.1-2_1.0.40",
+        "version": "1.0.40",
         "app_metadata": {
-            "app_version": "2026.5.7",
+            "app_version": "2026.7.1-2",
             "capabilities": [],
             "categories": [
                 "ai"
@@ -46,11 +46,12 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/openclaw_community/",
                 "https://github.com/openclaw/openclaw"
             ],
             "title": "OpenClaw",
             "train": "community",
-            "version": "1.0.30"
+            "version": "1.0.40"
         },
         "schema": {
             "groups": [
@@ -298,7 +299,7 @@
                             {
                                 "variable": "user",
                                 "label": "User ID",
-                                "description": "The user id that Actual Budget files will be owned by.",
+                                "description": "The user id that OpenClaw files will be owned by.",
                                 "schema": {
                                     "type": "int",
                                     "min": 568,
@@ -309,7 +310,7 @@
                             {
                                 "variable": "group",
                                 "label": "Group ID",
-                                "description": "The group id that Actual Budget files will be owned by.",
+                                "description": "The group id that OpenClaw files will be owned by.",
                                 "schema": {
                                     "type": "int",
                                     "min": 568,
@@ -1086,7 +1087,7 @@
         "readme": "<h1>OpenClaw</h1> <p><a href=\"https://openclaw.ai\">OpenClaw</a> is a personal AI assistant you run on your own devices.</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "2026.5.7",
+            "app_version": "2026.7.1-2",
             "capabilities": [],
             "categories": [
                 "ai"
@@ -1123,11 +1124,12 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/openclaw_community/",
                 "https://github.com/openclaw/openclaw"
             ],
             "title": "OpenClaw",
             "train": "community",
-            "version": "1.0.30"
+            "version": "1.0.40"
         }
     }
 }

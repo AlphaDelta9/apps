@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: 19.0-20260504
+app_version: 19.0-20260817
 capabilities: []
 categories:
 - productivity
@@ -35,8 +35,9 @@ screenshots:
 - https://media.sys.truenas.net/apps/odoo/screenshots/screenshot1.png
 - https://media.sys.truenas.net/apps/odoo/screenshots/screenshot2.png
 sources:
-- https://hub.docker.com/_/odoo
+- https://apps.truenas.com/catalog/odoo_community/
 - https://github.com/odoo/odoo
+- https://hub.docker.com/_/odoo
 title: Odoo
 train: community
-version: 1.6.15
+version: 1.6.37

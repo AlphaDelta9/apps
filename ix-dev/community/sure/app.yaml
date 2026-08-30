@@ -1,4 +1,4 @@
-app_version: 0.7.0
+app_version: 0.7.3
 capabilities: []
 categories:
 - financial
@@ -40,7 +40,8 @@ run_as_context:
   user_name: Host user is [unknown (1000)]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/sure_community/
 - https://github.com/we-promise/sure
 title: Sure
 train: community
-version: 1.0.9
+version: 1.0.27

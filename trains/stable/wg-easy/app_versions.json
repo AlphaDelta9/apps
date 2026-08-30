@@ -1,15 +1,15 @@
 {
-    "2.1.5": {
+    "2.1.8": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/stable/wg-easy/2.1.5",
-        "last_update": "2026-04-27 11:53:24",
+        "location": "/__w/apps/apps/trains/stable/wg-easy/2.1.8",
+        "last_update": "2026-08-14 13:55:11",
         "required_features": [],
-        "human_version": "15.2.2_2.1.5",
-        "version": "2.1.5",
+        "human_version": "15.4.0_2.1.8",
+        "version": "2.1.8",
         "app_metadata": {
-            "app_version": "15.2.2",
+            "app_version": "15.4.0",
             "capabilities": [
                 {
                     "description": "WG Easy is able to perform network administration tasks",
@@ -66,11 +66,12 @@
                 "https://media.sys.truenas.net/apps/wg-easy/screenshots/screenshot1.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/wg-easy_stable/",
                 "https://github.com/wg-easy/wg-easy"
             ],
             "title": "WG Easy",
             "train": "stable",
-            "version": "2.1.5"
+            "version": "2.1.8"
         },
         "schema": {
             "groups": [
@@ -1019,7 +1020,7 @@
         "readme": "<h1>WG-Easy</h1> <p><a href=\"https://github.com/wg-easy/wg-easy\">WG-Easy (WireGuard Easy)</a> is the easiest way to install &amp; manage WireGuard!</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "15.2.2",
+            "app_version": "15.4.0",
             "capabilities": [
                 {
                     "description": "WG Easy is able to perform network administration tasks",
@@ -1076,11 +1077,12 @@
                 "https://media.sys.truenas.net/apps/wg-easy/screenshots/screenshot1.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/wg-easy_stable/",
                 "https://github.com/wg-easy/wg-easy"
             ],
             "title": "WG Easy",
             "train": "stable",
-            "version": "2.1.5"
+            "version": "2.1.8"
         }
     }
 }

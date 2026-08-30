@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: 2026.5.0
+app_version: 2026.8.3
 capabilities:
 - description: Home Assistant is able to change file ownership arbitrarily
   name: CHOWN
@@ -45,7 +45,8 @@ run_as_context:
 screenshots:
 - https://media.sys.truenas.net/apps/home-assistant/screenshots/screenshot1.png
 sources:
+- https://apps.truenas.com/catalog/home-assistant_stable/
 - https://github.com/home-assistant/home-assistant
-title: Home Assistant
+title: Home Assistant (Deprecated)
 train: stable
-version: 1.8.25
+version: 1.8.56

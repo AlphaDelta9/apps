@@ -1,4 +1,4 @@
-app_version: 2.2.19
+app_version: 2.3.3
 capabilities: []
 categories:
 - productivity
@@ -31,8 +31,9 @@ run_as_context:
   user_name: Host user is [netdata]
 screenshots: []
 sources:
-- https://miniflux.app/
+- https://apps.truenas.com/catalog/miniflux_community/
 - https://github.com/miniflux/v2
+- https://miniflux.app/
 title: Miniflux
 train: community
-version: 1.2.15
+version: 1.2.32

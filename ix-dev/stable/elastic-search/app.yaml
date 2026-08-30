@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: 9.4.0
+app_version: 9.5.2
 capabilities: []
 categories:
 - monitoring
@@ -29,8 +29,9 @@ run_as_context:
   user_name: Host user is [unknown (1000)]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/elastic-search_stable/
 - https://www.elastic.co/
 - https://www.elastic.co/guide/en/elasticsearch/reference/master/docker.html#docker-configuration-methods
 title: Elastic Search
 train: stable
-version: 1.4.10
+version: 1.4.18

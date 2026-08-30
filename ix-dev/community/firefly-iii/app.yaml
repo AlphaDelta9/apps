@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: version-6.6.2
+app_version: version-6.6.6
 capabilities:
 - description: Importer is able to change file ownership arbitrarily
   name: CHOWN
@@ -59,8 +59,9 @@ screenshots:
 - https://media.sys.truenas.net/apps/firefly-iii/screenshots/screenshot3.png
 - https://media.sys.truenas.net/apps/firefly-iii/screenshots/screenshot4.png
 sources:
-- https://hub.docker.com/r/fireflyiii/core/
+- https://apps.truenas.com/catalog/firefly-iii_community/
 - https://github.com/firefly-iii/firefly-iii
+- https://hub.docker.com/r/fireflyiii/core/
 title: Firefly III
 train: community
-version: 1.9.25
+version: 1.9.51

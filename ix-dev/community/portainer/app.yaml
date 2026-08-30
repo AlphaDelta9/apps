@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: 2.41.0
+app_version: 2.45.0
 capabilities: []
 categories:
 - management
@@ -33,8 +33,9 @@ screenshots:
 - https://media.sys.truenas.net/apps/portainer/screenshots/screenshot1.png
 - https://media.sys.truenas.net/apps/portainer/screenshots/screenshot2.png
 sources:
-- https://www.portainer.io
+- https://apps.truenas.com/catalog/portainer_community/
 - https://github.com/portainer/portainer
+- https://www.portainer.io
 title: Portainer
 train: community
-version: 1.7.4
+version: 1.7.10

@@ -1,13 +1,13 @@
 {
-    "1.2.12": {
+    "1.2.25": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/media-manager/1.2.12",
-        "last_update": "2026-04-27 11:53:24",
+        "location": "/__w/apps/apps/trains/community/media-manager/1.2.25",
+        "last_update": "2026-08-24 12:53:14",
         "required_features": [],
-        "human_version": "1.12.3_1.2.12",
-        "version": "1.2.12",
+        "human_version": "1.12.3_1.2.25",
+        "version": "1.2.25",
         "app_metadata": {
             "app_version": "1.12.3",
             "capabilities": [],
@@ -52,11 +52,12 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/media-manager_community/",
                 "https://github.com/maxdorninger/MediaManager"
             ],
             "title": "Media Manager",
             "train": "community",
-            "version": "1.2.12"
+            "version": "1.2.25"
         },
         "schema": {
             "groups": [
@@ -125,7 +126,6 @@
                             {
                                 "variable": "db_password",
                                 "label": "Database Password",
-                                "description": "The password for Media Manager.",
                                 "schema": {
                                     "type": "string",
                                     "default": "",
@@ -1500,11 +1500,12 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/media-manager_community/",
                 "https://github.com/maxdorninger/MediaManager"
             ],
             "title": "Media Manager",
             "train": "community",
-            "version": "1.2.12"
+            "version": "1.2.25"
         }
     }
 }

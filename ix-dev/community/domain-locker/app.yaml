@@ -1,4 +1,4 @@
-app_version: 0.1.4
+app_version: 0.2.4
 capabilities: []
 categories:
 - networking
@@ -38,9 +38,10 @@ run_as_context:
   user_name: Host user is [netdata]
 screenshots: []
 sources:
-- https://github.com/Lissy93/domain-locker
+- https://apps.truenas.com/catalog/domain-locker_community/
 - https://ghcr.io/lissy93/domain-locker
+- https://github.com/Lissy93/domain-locker
 - https://hub.docker.com/r/lissy93/domain-locker
 title: Domain Locker
 train: community
-version: 1.0.13
+version: 1.0.36

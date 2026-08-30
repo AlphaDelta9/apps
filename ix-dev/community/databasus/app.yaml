@@ -1,4 +1,4 @@
-app_version: v3.36.0
+app_version: v3.55.2
 capabilities:
 - description: Databasus is able to change file ownership arbitrarily
   name: CHOWN
@@ -38,8 +38,9 @@ run_as_context:
 screenshots:
 - https://media.sys.truenas.net/apps/databasus/screenshots/screenshot1.svg
 sources:
+- https://apps.truenas.com/catalog/databasus_community/
 - https://databasus.com
 - https://hub.docker.com/r/databasus/databasus
 title: Databasus
 train: community
-version: 1.0.16
+version: 1.0.37

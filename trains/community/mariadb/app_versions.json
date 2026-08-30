@@ -1,15 +1,15 @@
 {
-    "1.1.5": {
+    "1.1.10": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/mariadb/1.1.5",
-        "last_update": "2026-04-27 11:53:24",
+        "location": "/__w/apps/apps/trains/community/mariadb/1.1.10",
+        "last_update": "2026-08-25 13:49:03",
         "required_features": [],
-        "human_version": "11.8.6_1.1.5",
-        "version": "1.1.5",
+        "human_version": "11.8.9_1.1.10",
+        "version": "1.1.10",
         "app_metadata": {
-            "app_version": "11.8.6",
+            "app_version": "11.8.9",
             "capabilities": [],
             "categories": [
                 "database"
@@ -44,11 +44,12 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/mariadb_community/",
                 "https://hub.docker.com/_/mariadb"
             ],
             "title": "Mariadb",
             "train": "community",
-            "version": "1.1.5"
+            "version": "1.1.10"
         },
         "schema": {
             "groups": [
@@ -951,7 +952,7 @@
         "readme": "<h1>MariaDB</h1> <p><a href=\"https://mariadb.org/\">MariaDB</a> - MariaDB server is a community developed fork of MySQL server.</p> <p>MariaDB server is a community developed fork of MySQL server. Started by core members of the original MySQL team, MariaDB actively works with outside developers to deliver the most featureful, stable, and sanely licensed open SQL server in the industry.</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "11.8.6",
+            "app_version": "11.8.9",
             "capabilities": [],
             "categories": [
                 "database"
@@ -986,11 +987,12 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/mariadb_community/",
                 "https://hub.docker.com/_/mariadb"
             ],
             "title": "Mariadb",
             "train": "community",
-            "version": "1.1.5"
+            "version": "1.1.10"
         }
     }
 }

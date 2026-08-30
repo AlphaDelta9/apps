@@ -1,13 +1,13 @@
 {
-    "1.2.15": {
+    "1.2.29": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/domain-watchdog/1.2.15",
-        "last_update": "2026-05-07 13:38:17",
+        "location": "/__w/apps/apps/trains/community/domain-watchdog/1.2.29",
+        "last_update": "2026-08-24 12:53:14",
         "required_features": [],
-        "human_version": "v1.4.5_1.2.15",
-        "version": "1.2.15",
+        "human_version": "v1.4.5_1.2.29",
+        "version": "1.2.29",
         "app_metadata": {
             "app_version": "v1.4.5",
             "capabilities": [
@@ -71,11 +71,12 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/domain-watchdog_community/",
                 "https://github.com/maelgangloff/domain-watchdog"
             ],
             "title": "Domain Watchdog",
             "train": "community",
-            "version": "1.2.15"
+            "version": "1.2.29"
         },
         "schema": {
             "groups": [
@@ -1395,11 +1396,12 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/domain-watchdog_community/",
                 "https://github.com/maelgangloff/domain-watchdog"
             ],
             "title": "Domain Watchdog",
             "train": "community",
-            "version": "1.2.15"
+            "version": "1.2.29"
         }
     }
 }

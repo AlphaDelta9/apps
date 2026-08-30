@@ -1,4 +1,4 @@
-app_version: 4.0.0-beta.474
+app_version: 4.3.14
 capabilities:
 - description: Coolify is able to change file ownership arbitrarily
   name: CHOWN
@@ -50,7 +50,8 @@ run_as_context:
   user_name: Host user is [apps]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/coolify_community/
 - https://github.com/coollabsio/coolify
 title: Coolify
 train: community
-version: 1.2.24
+version: 1.2.52

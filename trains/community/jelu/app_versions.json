@@ -1,15 +1,15 @@
 {
-    "1.1.9": {
+    "1.1.16": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/jelu/1.1.9",
-        "last_update": "2026-04-27 11:53:24",
+        "location": "/__w/apps/apps/trains/community/jelu/1.1.16",
+        "last_update": "2026-08-24 14:01:08",
         "required_features": [],
-        "human_version": "0.82.0_1.1.9",
-        "version": "1.1.9",
+        "human_version": "0.84.6_1.1.16",
+        "version": "1.1.16",
         "app_metadata": {
-            "app_version": "0.82.0",
+            "app_version": "0.84.6",
             "capabilities": [],
             "categories": [
                 "media"
@@ -48,12 +48,13 @@
                 "https://media.sys.truenas.net/apps/jelu/screenshots/screenshot2.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/jelu_community/",
                 "https://github.com/bayang/jelu",
                 "https://hub.docker.com/repository/docker/wabayang/jelu"
             ],
             "title": "Jelu",
             "train": "community",
-            "version": "1.1.9"
+            "version": "1.1.16"
         },
         "schema": {
             "groups": [
@@ -1323,7 +1324,7 @@
         "readme": "<h1>Jelu</h1> <p><a href=\"https://github.com/bayang/jelu\">Jelu</a> is a self hosted read and to-read list book tracker.</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "0.82.0",
+            "app_version": "0.84.6",
             "capabilities": [],
             "categories": [
                 "media"
@@ -1362,12 +1363,13 @@
                 "https://media.sys.truenas.net/apps/jelu/screenshots/screenshot2.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/jelu_community/",
                 "https://github.com/bayang/jelu",
                 "https://hub.docker.com/repository/docker/wabayang/jelu"
             ],
             "title": "Jelu",
             "train": "community",
-            "version": "1.1.9"
+            "version": "1.1.16"
         }
     }
 }

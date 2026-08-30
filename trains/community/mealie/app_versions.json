@@ -1,18 +1,18 @@
 {
-    "1.8.19": {
+    "1.8.42": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/mealie/1.8.19",
-        "last_update": "2026-05-07 13:38:17",
+        "location": "/__w/apps/apps/trains/community/mealie/1.8.42",
+        "last_update": "2026-08-25 13:49:03",
         "required_features": [],
-        "human_version": "v3.17.0_1.8.19",
-        "version": "1.8.19",
+        "human_version": "v3.24.0_1.8.42",
+        "version": "1.8.42",
         "app_metadata": {
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "v3.17.0",
+            "app_version": "v3.24.0",
             "capabilities": [],
             "categories": [
                 "productivity"
@@ -57,11 +57,12 @@
                 "https://media.sys.truenas.net/apps/mealie/screenshots/screenshot1.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/mealie_community/",
                 "https://docs.mealie.io/"
             ],
             "title": "Mealie",
             "train": "community",
-            "version": "1.8.19"
+            "version": "1.8.42"
         },
         "schema": {
             "groups": [
@@ -134,7 +135,6 @@
                             {
                                 "variable": "db_password",
                                 "label": "Database Password",
-                                "description": "The password for Mealie.",
                                 "schema": {
                                     "type": "string",
                                     "default": "",
@@ -1169,7 +1169,7 @@
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "v3.17.0",
+            "app_version": "v3.24.0",
             "capabilities": [],
             "categories": [
                 "productivity"
@@ -1214,11 +1214,12 @@
                 "https://media.sys.truenas.net/apps/mealie/screenshots/screenshot1.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/mealie_community/",
                 "https://docs.mealie.io/"
             ],
             "title": "Mealie",
             "train": "community",
-            "version": "1.8.19"
+            "version": "1.8.42"
         }
     }
 }

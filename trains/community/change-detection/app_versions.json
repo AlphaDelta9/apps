@@ -1,15 +1,15 @@
 {
-    "1.1.22": {
+    "1.1.27": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/change-detection/1.1.22",
-        "last_update": "2026-04-28 12:24:24",
+        "location": "/__w/apps/apps/trains/community/change-detection/1.1.27",
+        "last_update": "2026-07-13 14:22:01",
         "required_features": [],
-        "human_version": "0.55.3_1.1.22",
-        "version": "1.1.22",
+        "human_version": "0.55.8_1.1.27",
+        "version": "1.1.27",
         "app_metadata": {
-            "app_version": "0.55.3",
+            "app_version": "0.55.8",
             "capabilities": [],
             "categories": [
                 "productivity"
@@ -49,11 +49,12 @@
                 "https://media.sys.truenas.net/apps/change-detection/screenshots/screenshot1.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/change-detection_community/",
                 "https://github.com/dgtlmoon/changedetection.io"
             ],
             "title": "ChangeDetection.io",
             "train": "community",
-            "version": "1.1.22"
+            "version": "1.1.27"
         },
         "schema": {
             "groups": [
@@ -929,7 +930,7 @@
         "readme": "<h1>ChangeDetection.io</h1> <p><a href=\"https://changedetection.io/\">ChangeDetection.io</a> is a Free and Open-Source Python website change detection and stock monitoring tool.</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "0.55.3",
+            "app_version": "0.55.8",
             "capabilities": [],
             "categories": [
                 "productivity"
@@ -969,11 +970,12 @@
                 "https://media.sys.truenas.net/apps/change-detection/screenshots/screenshot1.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/change-detection_community/",
                 "https://github.com/dgtlmoon/changedetection.io"
             ],
             "title": "ChangeDetection.io",
             "train": "community",
-            "version": "1.1.22"
+            "version": "1.1.27"
         }
     }
 }

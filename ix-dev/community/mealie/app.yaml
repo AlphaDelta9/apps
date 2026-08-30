@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: v3.17.0
+app_version: v3.24.0
 capabilities: []
 categories:
 - productivity
@@ -34,7 +34,8 @@ run_as_context:
 screenshots:
 - https://media.sys.truenas.net/apps/mealie/screenshots/screenshot1.png
 sources:
+- https://apps.truenas.com/catalog/mealie_community/
 - https://docs.mealie.io/
 title: Mealie
 train: community
-version: 1.8.19
+version: 1.8.42

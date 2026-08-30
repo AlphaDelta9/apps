@@ -1,4 +1,4 @@
-app_version: 4.118.0
+app_version: 4.135.0
 capabilities:
 - description: Code Server is able to write records to audit log
   name: AUDIT_WRITE
@@ -38,7 +38,8 @@ run_as_context:
   user_name: Host user is [apps]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/code-server_community/
 - https://github.com/coder/code-server
 title: Code Server
 train: community
-version: 1.1.18
+version: 1.1.35

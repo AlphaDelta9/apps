@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: 0.17.1
+app_version: 0.17.2
 capabilities:
 - description: Frigate is able to change file ownership arbitrarily
   name: CHOWN
@@ -45,7 +45,8 @@ screenshots:
 - https://media.sys.truenas.net/apps/frigate/screenshots/screenshot2.png
 - https://media.sys.truenas.net/apps/frigate/screenshots/screenshot3.png
 sources:
+- https://apps.truenas.com/catalog/frigate_community/
 - https://github.com/blakeblackshear/frigate
 title: Frigate
 train: community
-version: 1.3.7
+version: 1.3.9

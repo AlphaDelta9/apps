@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: 5.11.0-1-ce-non-root
+app_version: 5.15.0-1-ce-non-root
 capabilities: []
 categories:
 - security
@@ -37,8 +37,9 @@ screenshots:
 - https://media.sys.truenas.net/apps/passbolt/screenshots/screenshot3.png
 - https://media.sys.truenas.net/apps/passbolt/screenshots/screenshot4.png
 sources:
+- https://apps.truenas.com/catalog/passbolt_community/
 - https://hub.docker.com/r/passbolt/passbolt
 - https://www.passbolt.com
 title: Passbolt
 train: community
-version: 1.4.5
+version: 1.4.13

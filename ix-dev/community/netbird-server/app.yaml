@@ -1,4 +1,4 @@
-app_version: 0.70.5
+app_version: 0.77.1
 capabilities:
 - description: Dashboard is able to change file ownership arbitrarily
   name: CHOWN
@@ -45,9 +45,10 @@ run_as_context:
   user_name: Host user is [apps]
 screenshots: []
 sources:
-- https://netbird.io/
-- https://hub.docker.com/r/netbirdio/netbird-server
+- https://apps.truenas.com/catalog/netbird-server_community/
 - https://hub.docker.com/r/netbirdio/dashboard
+- https://hub.docker.com/r/netbirdio/netbird-server
+- https://netbird.io/
 title: NetBird Server
 train: community
-version: 1.0.14
+version: 1.0.46

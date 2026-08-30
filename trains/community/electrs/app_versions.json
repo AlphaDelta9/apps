@@ -1,15 +1,15 @@
 {
-    "1.1.5": {
+    "1.1.8": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/electrs/1.1.5",
-        "last_update": "2026-04-27 11:53:24",
+        "location": "/__w/apps/apps/trains/community/electrs/1.1.8",
+        "last_update": "2026-08-12 15:28:59",
         "required_features": [],
-        "human_version": "v0.11.0_1.1.5",
-        "version": "1.1.5",
+        "human_version": "v0.11.1_1.1.8",
+        "version": "1.1.8",
         "app_metadata": {
-            "app_version": "v0.11.0",
+            "app_version": "v0.11.1",
             "capabilities": [],
             "categories": [
                 "financial"
@@ -47,12 +47,13 @@
             ],
             "screenshots": [],
             "sources": [
-                "https://github.com/romanz/electrs",
-                "https://github.com/getumbrel/docker-electrs"
+                "https://apps.truenas.com/catalog/electrs_community/",
+                "https://github.com/getumbrel/docker-electrs",
+                "https://github.com/romanz/electrs"
             ],
             "title": "Electrs",
             "train": "community",
-            "version": "1.1.5"
+            "version": "1.1.8"
         },
         "schema": {
             "groups": [
@@ -158,7 +159,8 @@
                                 "label": "Bitcoin Node RPC Password",
                                 "schema": {
                                     "type": "string",
-                                    "required": true
+                                    "required": true,
+                                    "private": true
                                 }
                             },
                             {
@@ -941,7 +943,7 @@
         "readme": "<h1>Electrs</h1> <p><a href=\"https://github.com/romanz/electrs\">Electrs</a> is an efficient re-implementation of Electrum Server in Rust.</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "v0.11.0",
+            "app_version": "v0.11.1",
             "capabilities": [],
             "categories": [
                 "financial"
@@ -979,12 +981,13 @@
             ],
             "screenshots": [],
             "sources": [
-                "https://github.com/romanz/electrs",
-                "https://github.com/getumbrel/docker-electrs"
+                "https://apps.truenas.com/catalog/electrs_community/",
+                "https://github.com/getumbrel/docker-electrs",
+                "https://github.com/romanz/electrs"
             ],
             "title": "Electrs",
             "train": "community",
-            "version": "1.1.5"
+            "version": "1.1.8"
         }
     }
 }

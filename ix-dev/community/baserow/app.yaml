@@ -1,4 +1,4 @@
-app_version: 2.2.2
+app_version: 2.3.3
 capabilities:
 - description: Baserow is able to change file ownership arbitrarily
   name: CHOWN
@@ -54,7 +54,8 @@ run_as_context:
   user_name: Host user is [apps]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/baserow_community/
 - https://gitlab.com/baserow/baserow
 title: Baserow
 train: community
-version: 1.2.23
+version: 1.2.41

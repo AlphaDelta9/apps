@@ -1,13 +1,13 @@
 {
-    "1.2.13": {
+    "1.2.26": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/piped/1.2.13",
-        "last_update": "2026-04-27 11:53:24",
+        "location": "/__w/apps/apps/trains/community/piped/1.2.26",
+        "last_update": "2026-08-24 12:53:14",
         "required_features": [],
-        "human_version": "latest_1.2.13",
-        "version": "1.2.13",
+        "human_version": "latest_1.2.26",
+        "version": "1.2.26",
         "app_metadata": {
             "app_version": "latest",
             "capabilities": [],
@@ -72,12 +72,13 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/piped_community/",
                 "https://docs.piped.video",
                 "https://github.com/TeamPiped/Piped"
             ],
             "title": "Piped",
             "train": "community",
-            "version": "1.2.13"
+            "version": "1.2.26"
         },
         "schema": {
             "groups": [
@@ -146,7 +147,6 @@
                             {
                                 "variable": "db_password",
                                 "label": "Database Password",
-                                "description": "The password for Piped.",
                                 "schema": {
                                     "type": "string",
                                     "default": "",
@@ -1237,12 +1237,13 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/piped_community/",
                 "https://docs.piped.video",
                 "https://github.com/TeamPiped/Piped"
             ],
             "title": "Piped",
             "train": "community",
-            "version": "1.2.13"
+            "version": "1.2.26"
         }
     }
 }

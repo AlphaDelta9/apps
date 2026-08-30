@@ -1,15 +1,15 @@
 {
-    "1.2.13": {
+    "1.2.30": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/opencloud/1.2.13",
-        "last_update": "2026-04-27 11:53:24",
+        "location": "/__w/apps/apps/trains/community/opencloud/1.2.30",
+        "last_update": "2026-08-26 14:10:44",
         "required_features": [],
-        "human_version": "6.1.0_1.2.13",
-        "version": "1.2.13",
+        "human_version": "7.5.0_1.2.30",
+        "version": "1.2.30",
         "app_metadata": {
-            "app_version": "6.1.0",
+            "app_version": "7.5.0",
             "capabilities": [],
             "categories": [
                 "storage"
@@ -59,13 +59,14 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/opencloud_community/",
                 "https://docs.opencloud.eu/",
                 "https://github.com/OpenCloud/OpenCloud",
                 "https://hub.docker.com/r/opencloudeu/opencloud-rolling"
             ],
             "title": "OpenCloud",
             "train": "community",
-            "version": "1.2.13"
+            "version": "1.2.30"
         },
         "schema": {
             "groups": [
@@ -268,6 +269,10 @@
                                                     {
                                                         "value": "onlyoffice",
                                                         "description": "OnlyOffice"
+                                                    },
+                                                    {
+                                                        "value": "eurooffice",
+                                                        "description": "Euro-Office"
                                                     }
                                                 ]
                                             }
@@ -308,7 +313,7 @@
                                         {
                                             "variable": "jwt_secret",
                                             "label": "JWT Secret",
-                                            "description": "The JWT secret for OnlyOffice authentication. It must match the secret configured in the OnlyOffice server.",
+                                            "description": "The JWT secret for OnlyOffice/Euro-Office authentication. It must match the secret configured in the OnlyOffice/Euro-Office server.",
                                             "schema": {
                                                 "type": "string",
                                                 "show_if": [
@@ -319,8 +324,8 @@
                                                     ],
                                                     [
                                                         "type",
-                                                        "=",
-                                                        "onlyoffice"
+                                                        "!=",
+                                                        "collabora"
                                                     ]
                                                 ],
                                                 "default": "",
@@ -1988,7 +1993,7 @@
         "readme": "<h1>OpenCloud</h1> <p><a href=\"https://opencloud.eu\">OpenCloud</a> is an excellent file management and collaboration for public authorities, providers and business - or anyone who values ease of use and digital sovereignty.</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "6.1.0",
+            "app_version": "7.5.0",
             "capabilities": [],
             "categories": [
                 "storage"
@@ -2038,13 +2043,14 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/opencloud_community/",
                 "https://docs.opencloud.eu/",
                 "https://github.com/OpenCloud/OpenCloud",
                 "https://hub.docker.com/r/opencloudeu/opencloud-rolling"
             ],
             "title": "OpenCloud",
             "train": "community",
-            "version": "1.2.13"
+            "version": "1.2.30"
         }
     }
 }

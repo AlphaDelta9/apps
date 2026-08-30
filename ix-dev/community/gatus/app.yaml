@@ -1,4 +1,4 @@
-app_version: v5.35.0
+app_version: v5.36.0
 capabilities: []
 categories:
 - monitoring
@@ -27,7 +27,8 @@ run_as_context:
   user_name: Host user is [apps]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/gatus_community/
 - https://github.com/TwiN/gatus
 title: Gatus
 train: community
-version: 1.1.8
+version: 1.1.13

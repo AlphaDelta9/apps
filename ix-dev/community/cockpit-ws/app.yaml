@@ -1,4 +1,4 @@
-app_version: '360'
+app_version: '366'
 capabilities: []
 categories:
 - management
@@ -25,7 +25,8 @@ run_as_context:
   user_name: Host user is [root]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/cockpit-ws_community/
 - https://quay.io/repository/cockpit/ws
 title: Cockpit WS
 train: community
-version: 1.1.10
+version: 1.1.16

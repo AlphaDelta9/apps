@@ -93,7 +93,7 @@ module.exports = {
     ),
     customVersioning(
       // YYYY-MM-DD-rN
-      "^(?<major>\\d{4})-(?<minor>\\d{2})-(?<patch>\\d{2})-(?<build>r\\d+)$",
+      "^(?<major>\\d{4})-(?<minor>\\d{2})-(?<patch>\\d{2})-r(?<build>\\d+)$",
       ["ghcr.io/zoeyvid/npmplus"],
     ),
     customVersioning(
@@ -180,12 +180,12 @@ module.exports = {
     customVersioning(
       // 1.1.11-1 or 1.1.11
       "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-(?<build>\\d+))?$",
-      ["rustdesk/rustdesk-server"],
+      ["rustdesk/rustdesk-server", "ghcr.io/openclaw/openclaw"],
     ),
     customVersioning(
-      // 9.0.2-stable
+      // 9.1.2-stable
       "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-stable$",
-      ["lmscommunity/lyrionmusicserver"],
+      [" ghcr.io/lms-community/lyrionmusicserver"],
     ),
     customVersioning(
       // 2.1.0.3-stable
@@ -254,7 +254,7 @@ module.exports = {
     ),
     customVersioning(
       // v1.52.0-jammy
-      "^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>(noble|jammy))$",
+      "^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-(?<build>(noble|jammy)))?$",
       ["mcr.microsoft.com/playwright"],
     ),
     customVersioning(
@@ -274,7 +274,9 @@ module.exports = {
     ),
     customVersioning(
       // 0.8.1-pg18-trixie
-      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-pg18(-\\w+)?$",
+      // The pg major (and the distro suffix) is captured as "compatibility",
+      // so a pg17 pin only ever updates to another pg17 tag of the same variant
+      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<compatibility>pg(?:16|17|18)(?:-\\w+)?)$",
       ["pgvector/pgvector"],
     ),
     customVersioning(
@@ -293,6 +295,11 @@ module.exports = {
       ["ghcr.io/immich-app/immich-machine-learning"],
     ),
     customVersioning(
+      // 1.0.8-aio
+      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<compatibility>heavy-aio|aio)$",
+      ["ghcr.io/calagopus/panel"],
+    ),
+    customVersioning(
       // stable-2.0.55
       "^stable-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
       ["factoriotools/factorio"],
@@ -303,14 +310,14 @@ module.exports = {
       ["mbentley/omada-controller"],
     ),
     customVersioning(
+      // 0.7.6-nbxyz4
+      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-nbxyz(?<build>\\d+)$",
+      ["ghcr.io/netbootxyz/netbootxyz"],
+    ),
+    customVersioning(
       // apache-2.37.0
       "^apache-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
       ["kimai/kimai2"],
-    ),
-    customVersioning(
-      // 4.0.0-beta.434
-      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-beta\\.(?<build>\\d+)$",
-      ["ghcr.io/coollabsio/coolify"],
     ),
     customVersioning(
       // appname-1.2.3
@@ -318,8 +325,8 @@ module.exports = {
       ["opencloudeu/web-extensions"],
     ),
     customVersioning(
-      // 1.0.0-alpha.67
-      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-alpha\\.(?<build>\\d+))?$",
+      // 1.0.0-beta.4
+      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-beta\\.(?<build>\\d+))?$",
       ["rustfs/rustfs"],
     ),
     customVersioning(
@@ -346,6 +353,36 @@ module.exports = {
       // slim-v1.12.2
       "^slim-v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
       ["itzcrazykns1337/vane"],
+    ),
+    customVersioning(
+      // web-v2.9.2
+      "^web-v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
+      ["registry.gitlab.com/storyteller-platform/storyteller"],
+    ),
+    customVersioning(
+      // 0.9.0(.x)?
+      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(\\.(?<build>\\d+))?$",
+      ["jvmilazz0/kavita"],
+    ),
+    customVersioning(
+      // v1.0(.0)?
+      "^v(?<major>\\d+)\\.(?<minor>\\d+)(\\.(?<patch>\\d+))?$",
+      ["ghcr.io/retropex/bitcoin-truenas", "ghcr.io/sethforprivacy/p2pool"],
+    ),
+    customVersioning(
+      // v2026.5.29(.2)?
+      "^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(\\.(?<build>\\d+))?$",
+      ["nousresearch/hermes-agent"],
+    ),
+    customVersioning(
+      // v0.1.7-alpha(.1)?
+      "^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-alpha(\\.(?<build>\\d+))?$",
+      ["ghcr.io/whiteassassins/ae-netscope"],
+    ),
+    customVersioning(
+      // 6.5.2-81
+      "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$",
+      ["ghcr.io/zammad/zammad"],
     ),
   ],
 };

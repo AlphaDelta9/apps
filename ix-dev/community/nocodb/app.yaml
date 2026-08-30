@@ -1,4 +1,4 @@
-app_version: 0.301.5
+app_version: 2026.08.1
 capabilities: []
 categories:
 - productivity
@@ -39,9 +39,10 @@ run_as_context:
   user_name: Host user is [apps]
 screenshots: []
 sources:
-- https://hub.docker.com/r/nocodb/nocodb
+- https://apps.truenas.com/catalog/nocodb_community/
 - https://github.com/nocodb/nocodb
+- https://hub.docker.com/r/nocodb/nocodb
 - https://nocodb.com/
 title: NocoDB
 train: community
-version: 1.2.18
+version: 1.2.34

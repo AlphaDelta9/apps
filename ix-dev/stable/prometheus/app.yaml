@@ -1,6 +1,6 @@
 annotations:
   min_scale_version: 24.10.2.2
-app_version: v3.11.3
+app_version: v3.14.0
 capabilities: []
 categories:
 - monitoring
@@ -29,8 +29,9 @@ run_as_context:
 screenshots:
 - https://media.sys.truenas.net/apps/prometheus/screenshots/screenshot1.png
 sources:
+- https://apps.truenas.com/catalog/prometheus_stable/
 - https://github.com/prometheus/prometheus
 - https://prometheus.io
 title: Prometheus
 train: stable
-version: 1.4.10
+version: 1.4.16

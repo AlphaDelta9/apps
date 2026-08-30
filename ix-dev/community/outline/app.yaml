@@ -1,4 +1,4 @@
-app_version: 1.7.1
+app_version: 1.9.2
 capabilities: []
 categories:
 - productivity
@@ -37,8 +37,9 @@ run_as_context:
   user_name: Host user is [apps]
 screenshots: []
 sources:
+- https://apps.truenas.com/catalog/outline_community/
 - https://docs.getoutline.com/s/hosting
 - https://github.com/outline/outline
 title: Outline
 train: community
-version: 1.2.19
+version: 1.2.40

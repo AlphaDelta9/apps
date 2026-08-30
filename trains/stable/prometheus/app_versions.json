@@ -1,18 +1,18 @@
 {
-    "1.4.10": {
+    "1.4.16": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/stable/prometheus/1.4.10",
-        "last_update": "2026-04-27 17:09:28",
+        "location": "/__w/apps/apps/trains/stable/prometheus/1.4.16",
+        "last_update": "2026-08-18 12:57:03",
         "required_features": [],
-        "human_version": "v3.11.3_1.4.10",
-        "version": "1.4.10",
+        "human_version": "v3.14.0_1.4.16",
+        "version": "1.4.16",
         "app_metadata": {
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "v3.11.3",
+            "app_version": "v3.14.0",
             "capabilities": [],
             "categories": [
                 "monitoring"
@@ -50,12 +50,13 @@
                 "https://media.sys.truenas.net/apps/prometheus/screenshots/screenshot1.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/prometheus_stable/",
                 "https://github.com/prometheus/prometheus",
                 "https://prometheus.io"
             ],
             "title": "Prometheus",
             "train": "stable",
-            "version": "1.4.10"
+            "version": "1.4.16"
         },
         "schema": {
             "groups": [
@@ -1129,7 +1130,7 @@
             "annotations": {
                 "min_scale_version": "24.10.2.2"
             },
-            "app_version": "v3.11.3",
+            "app_version": "v3.14.0",
             "capabilities": [],
             "categories": [
                 "monitoring"
@@ -1167,12 +1168,13 @@
                 "https://media.sys.truenas.net/apps/prometheus/screenshots/screenshot1.png"
             ],
             "sources": [
+                "https://apps.truenas.com/catalog/prometheus_stable/",
                 "https://github.com/prometheus/prometheus",
                 "https://prometheus.io"
             ],
             "title": "Prometheus",
             "train": "stable",
-            "version": "1.4.10"
+            "version": "1.4.16"
         }
     }
 }

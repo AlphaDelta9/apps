@@ -1,15 +1,15 @@
 {
-    "1.1.7": {
+    "1.1.10": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/apps/apps/trains/community/donetick/1.1.7",
-        "last_update": "2026-04-27 11:53:24",
+        "location": "/__w/apps/apps/trains/community/donetick/1.1.10",
+        "last_update": "2026-08-19 12:54:31",
         "required_features": [],
-        "human_version": "v0.1.75_1.1.7",
-        "version": "1.1.7",
+        "human_version": "v0.1.79_1.1.10",
+        "version": "1.1.10",
         "app_metadata": {
-            "app_version": "v0.1.75",
+            "app_version": "v0.1.79",
             "capabilities": [],
             "categories": [
                 "productivity"
@@ -45,12 +45,13 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/donetick_community/",
                 "https://github.com/donetick/donetick",
                 "https://hub.docker.com/r/donetick/donetick"
             ],
             "title": "Donetick",
             "train": "community",
-            "version": "1.1.7"
+            "version": "1.1.10"
         },
         "schema": {
             "groups": [
@@ -1105,7 +1106,7 @@
         "readme": "<h1>Donetick</h1> <p><a href=\"https://github.com/donetick/donetick\">Donetick</a> is a self-hosted to-do list and habit tracker.</p>",
         "changelog": null,
         "chart_metadata": {
-            "app_version": "v0.1.75",
+            "app_version": "v0.1.79",
             "capabilities": [],
             "categories": [
                 "productivity"
@@ -1141,12 +1142,13 @@
             ],
             "screenshots": [],
             "sources": [
+                "https://apps.truenas.com/catalog/donetick_community/",
                 "https://github.com/donetick/donetick",
                 "https://hub.docker.com/r/donetick/donetick"
             ],
             "title": "Donetick",
             "train": "community",
-            "version": "1.1.7"
+            "version": "1.1.10"
         }
     }
 }

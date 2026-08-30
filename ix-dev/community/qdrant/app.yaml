@@ -1,4 +1,4 @@
-app_version: 1.17.1
+app_version: v1.19.0
 capabilities: []
 categories:
 - database
@@ -32,8 +32,9 @@ run_as_context:
   user_name: Host user is [apps]
 screenshots: []
 sources:
-- https://hub.docker.com/r/qdrant/qdrant
+- https://apps.truenas.com/catalog/qdrant_community/
 - https://github.com/qdrant/qdrant
+- https://hub.docker.com/r/qdrant/qdrant
 title: Qdrant
 train: community
-version: 1.0.2
+version: 1.0.8
